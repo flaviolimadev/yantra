@@ -1,0 +1,1069 @@
+body {
+  background-image: url("../img/bg.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 100vh
+}
+
+ul, li {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0px;
+}
+
+header {
+  margin-bottom: 2vw;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+
+@font-face {
+  font-family: HandelGothicD;
+  src: url('../fonts/HandelGothicDRegular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+.area-logo {
+  width: 30%;
+}
+
+.title-perfil {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #FFF;
+}
+
+.title-perfil .left {
+  font-family: 'HandelGothicD', 'Roboto', 'sans-serif';
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.subtitle-perfil {
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: lowercase;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #FFF;
+  padding: 0px 15px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+}
+
+.subtitle-perfil span {
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.subtitle-perfil.mobile {
+  display: none;
+}
+
+.btn-fechar {
+  text-align: center;
+}
+
+.btn-fechar div {
+  background: rgba(0, 0, 0, 0.3);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-fechar .esc {
+  display: block;
+  font-size: 10px;
+  color: #FFF;
+}
+
+main {
+  display: flex;
+  padding: 0rem 2rem;
+}
+
+.menu-perfil {
+  width: 35%;
+}
+
+.conteudo-perfil {
+  width: 100%;
+}
+
+.menu-perfil ul {
+  max-width: 300px;
+}
+
+.menu-perfil li {
+  margin-bottom: 10px !important;
+}
+
+.menu-perfil ul a {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  color: #FFF;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.menu-perfil ul a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: .3s;
+}
+
+.menu-perfil ul a.selected, #menu a.selected {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+a.btn-sair {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #FFF;
+  padding: 10px 50px;
+  border-radius: 25px;
+  font-family: 'HandelGothicD', 'Roboto', 'sans-serif';
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+a.btn-sair:hover {
+  background-color: rgba(255, 255, 255, .1);
+  transition: .3s;
+}
+
+.conteudo-perfil .title {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  height: 60px;
+}
+
+.conteudo-perfil .title:hover {
+  cursor: pointer;
+}
+
+.conteudo-perfil .title span {
+  font-family: 'HandelGothicD', 'Roboto', 'sans-serif';
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #FFF;
+  letter-spacing: 1px;
+}
+
+.conteudo-perfil .card.card-body {
+  padding: 40px 40px;
+  border: none;
+  border-radius: 0;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  color: #FFF;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-bottom: 1rem !important;
+}
+
+.conteudo-perfil .senha input,  .conteudo-perfil .dados input, .input-deposito {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #FFF;
+  height: 34px;
+  line-height: 2rem;
+  padding-left: 15px;
+  border-radius: 20px;
+  border: none;
+}
+
+.conteudo-perfil .senha input {
+  width: 300px;
+}
+
+.conteudo-perfil .senha label {
+  font-size: 14px;
+  margin-bottom: 0.5rem;
+}
+
+.conteudo-perfil .senha p {
+  max-width: 300px;
+  margin-bottom: 1rem !important;
+}
+
+.conteudo-perfil .senha .btn-confirmar, .btn-padrao {
+  margin-bottom: 1rem !important;
+  font-family: 'HandelGothicD', 'Roboto', 'sans-serif';
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 25px;
+  padding: 10px;
+  color: #000;
+  background-image: linear-gradient(to right, #b79237 , #decd4b);
+}
+.btnconfirmar-deposito{
+  display: inline-block;
+  margin-bottom: 1rem !important;
+  font-family: 'HandelGothicD', 'Roboto', 'sans-serif';
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 30px;
+  color: #000;
+  background-image: linear-gradient(to right, #b79237 , #decd4b);
+}
+.conteudo-perfil .senha .btn-confirmar:hover, .btn-padrao:hover {
+  color: #FFF;
+  transition: .2s;
+}
+
+.validar-documents label {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  min-width: 210px;
+  justify-content: center;
+  display: grid;
+  padding: 0.375rem 0.75rem;
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+}
+
+.form-dados {
+  text-align: left !important;
+}
+
+.form-dados label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form-control:disabled {
+  background-color: #d1d1d1 !important;
+}
+
+.form-dados input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.form-dados input::placeholder, .input-deposito::placeholder {
+  color: #FFF;
+}
+
+.form-dados input:focus {
+  background-color: #36373c;
+  color: #FFF;
+  border: 1px solid #FFF;
+  box-shadow: none;
+}
+
+.box-enviardocuments {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+
+.validar-documents {
+  text-align: center;
+}
+
+.validar-documents div {
+  margin-top: 2% !important;
+}
+
+.validar-documents.dois label {
+  cursor: auto !important;
+}
+
+.validar-documents label {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  min-width: 210px;
+  justify-content: center;
+  display: grid;
+  padding: 0.375rem 0.75rem;
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+}
+
+.validar-documents label img {
+  margin: 0 auto;
+}
+
+.validar-documents input {
+  font-size: 10px;
+}
+
+.box-enviardocuments ol {
+  display: inline-grid;
+  gap: 10px;
+  text-align: left;
+  color: #f1f1f1;
+  font-size: 11px;
+  width: 100%;
+  padding: 0;
+  padding-top: 2.5rem;
+}
+
+#btn-mobile {
+  display: none;
+}
+
+.metodos-deposito {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px;
+  justify-content: left;
+}
+
+.metodos-deposito .metodo {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 173px;
+  height: 173px;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.metodo .superior {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFF;
+  height: 60%;
+  border-radius: 10px;
+  position: relative;
+}
+
+.metodo.winpay .superior {
+  background: #00aee0;
+}
+.metodo.pix .superior {
+  background: #00aee0;
+}
+
+
+.metodo.bitcoin .superior {
+  background: #fdb110;
+}
+
+.metodo.usdt .superior {
+  background: #19a26a;
+}
+
+.metodo .superior .tag {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+  background-image: linear-gradient(to right, #b79237 , #decd4b, #b79237);
+  padding: 0px 10px;
+  border-radius: 20px;
+}
+
+.metodo .inferior {
+  height: 35%;
+  padding: 8px 20px;
+  color: #FFF;
+  text-align: left;
+}
+
+.title-metodo {
+  font-weight: bolder;
+}
+
+.subtitle-metodo {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.valor-deposito {
+  padding: 10px;
+}
+
+.valor-deposito .mtd-selecionado {
+  color: #dedede;
+}
+
+.valor-deposito .mtd-selecionado span {
+  font-weight: 600;
+  color: #FFF;
+}
+
+.img-deposito img {
+  width: 200px;
+  border: 5px solid #FFF;
+  position: relative;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+}
+
+.btn-deposito {
+     display: inline-block;
+  margin-bottom: 1rem !important;
+  font-family: 'HandelGothicD', 'Roboto', 'sans-serif';
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 25px;
+  padding: 10px;
+  color: #000;
+  background-image: linear-gradient(to right, #b79237 , #decd4b);
+  text-align: center;
+}
+
+#winpay_metodo{
+    font-family: 'HandelGothicD', 'Roboto', 'sans-serif';
+    margin-top: 2vw;
+    width: 35vw;
+    padding: 40px 20px;
+    background-color: #292a2e;
+    border-radius: 10px;
+    border-bottom: 5px solid #616161;
+}
+#winpay_metodo small{
+    color: #decd4b;
+}
+
+#formaDeposito{
+    padding: 20px 290px 20px 10px;
+    border-radius: 10px 10px 0 0px;
+    border-bottom: 4px solid #decd4b;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+#prazoDeposito{
+    padding: 10px 270px 10px 10px;
+    border-radius: 0px;
+    font-size: 18px;
+}
+#cods,#pix_valor{
+    color: #fff;
+    width: 300px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    border-style: none;
+    border-bottom: 3px solid white;
+}
+
+#cods::placeholder, #pix_valor::placeholder {
+  color: #fff;
+}
+
+#acesse{
+    padding-bottom: 5px;
+    border-bottom: 2px solid white;
+}
+
+h6{
+    margin-top: 20px;
+    color: #ece7be;
+}
+#pix_metodo{
+    font-family: 'HandelGothicD', 'Roboto', 'sans-serif';
+    margin-top: 2vw;
+    width: 30vw;
+    padding: 40px 20px;
+    background-color: #292a2e;
+    border-radius: 10px;
+    border-bottom: 5px solid #616161;
+}
+
+#usdt_metodo{
+    font-family: 'HandelGothicD', 'Roboto', 'sans-serif';
+    width: 30vw;
+    padding: 40px 20px;
+    background-color: #292a2e;
+    border-radius: 10px;
+    border-bottom: 5px solid #616161;
+}
+#pix_metodo small{
+    color: #decd4b;
+}
+#wire_metodo small{
+    color: #decd4b;
+}
+#usdt_metodo small{
+    color: #decd4b;
+}
+#eth_metodo small{
+    color: #decd4b;
+}
+#btc_metodo small{
+    color: #decd4b;
+}
+#eth_metodo{
+    width: 30vw;
+    margin-top: 2vw;
+    font-family: 'HandelGothicD', 'Roboto', 'sans-serif';
+    padding: 40px 20px;
+    background-color: #292a2e;
+    border-radius: 10px;
+    border-bottom: 5px solid #616161;
+}
+#btc_metodo{
+    font-family: 'HandelGothicD', 'Roboto', 'sans-serif';
+    margin-top: 2vw;
+    width: 30vw;
+    padding: 40px 20px;
+    background-color: #292a2e;
+    border-radius: 10px;
+    border-bottom: 5px solid #616161;
+}
+#wire_metodo{
+    font-family: 'HandelGothicD', 'Roboto', 'sans-serif';
+    margin-top: 2vw;
+    width: 30vw;
+    padding: 40px 20px;
+    background-color: #292a2e;
+    border-radius: 10px;
+    border-bottom: 5px solid #616161;
+}
+
+
+#informacoesDeposito{
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 1px 2px 15px rgb(47, 47, 47);
+    border-bottom: 10px solid #ffffff;
+    background-color: #212224;
+    color: #ffffff;
+}
+
+#prazoDeposito{
+    padding-top: 10px;
+    margin-top: 2vw;
+    border-radius: 0px;
+    font-size: 18px;
+}
+.menu-apostas {
+  display: flex;
+  gap: 1.5rem;
+  border-bottom: 2px solid rgba(0,0,0, 0.2);
+  margin-bottom: 1.5rem;
+}
+
+.menu-apostas .item-menu {
+  color: #FFF;
+  padding: 10px 0.5rem;
+  position: relative;
+  top: 2px;
+}
+
+.menu-apostas .item-menu:hover {
+  border-bottom: 4px solid #cdb342;
+}
+
+.menu-apostas .item-menu.selected {
+  border-bottom: 4px solid #cdb342;
+}
+
+.conteudo-perfil .title-aposta {
+  background: #212224;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.conteudo-perfil .title-aposta:hover {
+  cursor: pointer;
+}
+
+.conteudo-perfil .title-aposta .left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.conteudo-perfil .title-aposta .left span {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+  background-image: linear-gradient(to right, #b79237 , #decd4b, #b79237);
+  padding: 2px 10px;
+  border-radius: 20px;
+}
+
+.conteudo-perfil .title-aposta .right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  color: #FFF;
+}
+
+.conteudo-perfil .conteudo-aposta .card.card-body {
+  border-radius: 10px;
+  margin-bottom: 5px !important;
+}
+
+.conteudo-aposta  .sub-box1, .conteudo-aposta  .sub-box2, .conteudo-aposta  .sub-box3 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.conteudo-aposta .sub-box1 .left {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 700;
+}
+
+.conteudo-aposta .sub-box1 .right .odd {
+  color: #1cee72;
+}
+
+.conteudo-aposta .sub-box1 .right .placar {
+  color: #ff0000
+}
+
+.conteudo-aposta  .sub-box2, .conteudo-aposta  .sub-box3 {
+  font-size: 14px;
+}
+
+.conteudo-aposta  .sub-box3 {
+  margin-bottom: 0;
+}
+
+.conteudo-perfil .conteudo-aposta .card.card-body .meio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.conteudo-perfil .conteudo-aposta .card.card-body .meio span {
+  display: block;
+}
+
+.conteudo-perfil .conteudo-aposta .card.card-body .meio .aposta, .conteudo-perfil .conteudo-aposta .card.card-body .meio .potencial {
+  text-align: end;
+}
+
+.conteudo-perfil .conteudo-aposta .card.card-body .meio .valor {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.conteudo-perfil .conteudo-aposta .card.card-body .baixo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1%;
+}
+
+.conteudo-perfil .conteudo-aposta .card.card-body .baixo .encerrar-aposta a {
+  color: #FFF;
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.conteudo-perfil .conteudo-aposta .card.card-body .baixo .encerrar-aposta a .valor {
+  color: #1cee72;
+  font-weight: 700;
+}
+
+.conteudo-perfil .conteudo-aposta .card.card-body .baixo .encerrar-aposta {
+  width: 93%;
+  text-align: center;
+  color: #FFF;
+  border-radius: 30px;
+  border: 2px solid #212224;
+}
+
+.conteudo-perfil .conteudo-aposta .card.card-body .baixo .encerrar-aposta:hover, .conteudo-perfil .conteudo-aposta .card.card-body .baixo .id:hover {
+  background-color: #212224;
+  transition: .3s;
+}
+
+.conteudo-perfil .conteudo-aposta .card.card-body .baixo .id {
+  width: 51px;
+  height: 51px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #FFF;
+  border: 2px solid #212224;
+}
+
+.conteudo-perfil .conteudo-aposta .card.card-body .baixo .id a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  color: #FFF;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-dark{
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  
+}
+.table-dark thead tr th{
+  width: 0%;
+  background-color: #32343a;
+  padding: 20px;
+}
+.cardscaixa {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0px;
+}
+#linha-vertical {
+  height: 150px;
+  border-right: 1px solid rgba(213,192,70,1);
+}
+.cardscaixa div {
+  background: linear-gradient(90deg, rgba(172,133,51,1) 0%, rgba(213,192,70,1) 50%, rgba(172,133,51,1) 100%);
+  width: 160px;
+  height: 82px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.cardscaixa div p {
+  font-weight: bold;
+  color: #212224;
+  font-size: 13px;
+}
+
+.cardscaixa div h3 {
+  font-weight: 700;
+}
+
+.cardscaixa #total {
+  background: #32343a;
+}
+.cardscaixa #total p {
+  color: rgba(213,192,70,1);
+}
+
+.card-bonus {
+  max-width: 1000px;
+  display: flex;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
+.card-bonus .left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  border-radius: 20px;
+  padding: 4rem;
+  background-color: rgba(0,0,0, 0.2);
+}
+.card-bonus .right h4{
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.card-bonus .right {
+  height: auto;
+  position: relative;
+  display: grid;
+  justify-content: space-between;
+  color: #FFF;
+  padding: 1.5rem 2.2rem;
+}
+
+.card-bonus .atv-bons {
+  background-image: linear-gradient(to right, #b79237 , #decd4b, #b79237);
+  color: #000;
+  border-radius: 30px;
+  padding: 5px 20px;
+  max-width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.card-bonus .atv-bons:hover {
+  color: #FFF;
+  transition: .2s;
+}
+
+.btn-padrao.suporte {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 275px;
+}
+
+@media (max-width: 1200px) {
+  .menu-perfil, .area-logo {
+    margin-right: 5%;
+  }
+}
+
+@media (max-width: 1160px) {
+  .metodos-deposito {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 944px) {
+  .area-logo img {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 700px) {
+  #menu {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  header {
+    background-color: rgb(47 0 86);
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0px;
+    z-index: 9999999 !important;
+    -webkit-box-shadow: 0px 0px 10px 4px rgb(0 0 0 / 25%);
+    -moz-box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 10px 4px rgb(0 0 0 / 25%);
+  }
+  main {
+    margin-top: 15px;
+  }
+  .area-logo img {
+    max-width: none; 
+    width: 130px;
+  }
+  .menu-perfil, .title-perfil {
+    display: none;
+  }
+  .subtitle-perfil.mobile {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  .conteudo-perfil {
+    width: 100%;
+  }
+  .conteudo-perfil .title collapse{
+    gap: 10px;
+  }
+  .conteudo-perfil .title img {
+    width: 25px;
+  }
+  .conteudo-perfil .title span, .conteudo-perfil .senha .btn-confirmar, .btn-padrao {
+    font-size: 1rem;
+  }
+  .conteudo-perfil .senha input {
+    width: 100%;
+  }
+  .conteudo-perfil .senha p {
+    max-width: 100%;
+  }
+  #menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    right: 0px;
+    background: rgb(59 0 108);
+    transition: 0.6s;
+    z-index: 1000;
+    height: 0px;
+    visibility: hidden;
+    overflow-y: hidden;
+    padding: 2rem;
+  }
+  #nav.active #menu {
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: auto;
+  }
+  #menu li {
+    margin-bottom: 5px !important;
+  }
+  #menu a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 25px;
+  }
+  #menu a:hover {
+    background-color: #212224;
+    transition: .3s;
+  }
+  #btn-mobile {
+    display: flex;
+    align-items: center;
+    color: #FFF; 
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+  #hamburger {
+    border-top: 2px solid;
+    width: 20px;
+  }
+  #hamburger::after,
+  #hamburger::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+  #nav.active #hamburger {
+    border-top-color: transparent;
+  }
+  #nav.active #hamburger::before {
+    transform: rotate(135deg);
+  }
+  #nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+  a.btn-sair {
+    max-width: 143px;
+    display: flex !important;
+    justify-content: center;
+  }
+  .infos-deposito .mtd-selecionado {
+    display:block;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-bonus {
+    display: grid;
+  }
+  .card-bonus .left {
+    padding: 6rem;
+    height: 50vw;
+    width: 100%;
+  }
+  .card-bonus .right {
+    height: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .conteudo-perfil .conteudo-aposta .card.card-body .baixo .encerrar-aposta {
+    width: 80%;
+  }
+  .conteudo-perfil .conteudo-aposta .card.card-body .baixo .encerrar-aposta a {
+    font-size: 1rem;
+  }
+  .conteudo-perfil .conteudo-aposta .card.card-body .baixo .id {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .area-logo img {
+    width: 130px;
+  }
+  #menu {
+    top: 70px;
+  }
+  .menu-apostas {
+    font-size: 14px;
+  }
+  .conteudo-aposta .sub-box3 {
+    font-size: 12px;
+  }
+  .conteudo-perfil .conteudo-aposta .card.card-body .meio {
+    font-size: 12px;
+  }
+  .conteudo-perfil .conteudo-aposta .card.card-body .meio .valor {
+    font-size: 14px;
+  }
+  .conteudo-perfil .conteudo-aposta .card.card-body .baixo .encerrar-aposta a {
+    font-size: 12px;
+  }
+  .conteudo-perfil .conteudo-aposta .card.card-body .baixo .id {
+    font-size: 12px;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 350px) {
+  header, #menu {
+    padding: 1rem;
+  }
+  main {
+    padding: 0rem 1rem;
+  }
+}

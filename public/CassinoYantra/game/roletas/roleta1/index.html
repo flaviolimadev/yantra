@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roleta Yantra</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="area-roleta">
+    <div class="roulette">
+      <div class="roulette">
+        <div class="spinner"></div>
+        
+        <div class="shadow"></div>
+        
+        <div class="markers">
+          <div class="triangle">
+        </div>
+      </div>
+  
+      <div class="button" id="bnt_click01" style="display: none ;" onclick="star_btn_if()">
+          <span>Girar</span>
+      </div>
+
+      <div class="imagens">
+        <img src="img/corpo-roleta.png" alt="" width="500px">
+        <img src="img/roleta1-fora.png" alt="" width="500px">
+        <img src="img/roleta-aspiral.png" alt="" width="500px">
+        <img src="img/botao-roleta.png" alt="" width="500px">
+      </div>
+    </div>
+  </div>
+  
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>
+
+  <script src="js/main.js"></script>
+
+  <script>
+
+    function star_btn_if(){
+
+      window.parent.star_btn();
+
+    }
+
+  </script>
+</body>
+</html>

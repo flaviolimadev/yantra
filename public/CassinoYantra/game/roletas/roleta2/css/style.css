@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css?family=Material+Icons|Work+Sans:400,700,900");
+
+@font-face {
+  font-family: "AnandaNeptouch";
+  src: url("../fonts/AnandaNeptouch.ttf") format("truetype");
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+.area-roleta {
+    transform: scale(0.5);
+}
+
+/*//////////////////////////////////*/
+/*//////////////////////////////////*/
+/*//////////////////////////////////*/
+div.item span::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 6px;
+  left: 10px;
+  transform: rotate(-182.338deg);
+  background-color: #9b785a;
+  width: 75px;
+  height: 0.5px;.
+}
+
+.roulette {
+  font-family: 'Work Sans', sans-serif;
+  display: block;
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.area-roleta img {
+  width: 640px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-left: 60px;
+  padding-top: 98px;
+}
+
+.roulette .spinner .item .label {
+  font-family: 'AnandaNeptouch';
+  font-size: 5px;
+}
+
+.item .label .text::first-letter {
+  font-size: 2px !important;
+}
+
+
+.item:nth-child(1) .text::first-letter,
+.item:nth-child(8) .text::first-letter,
+.item:nth-child(15) .text::first-letter,
+.item:nth-child(22) .text::first-letter,
+.item:nth-child(29) .text::first-letter,
+.item:nth-child(36) .text::first-letter,
+.item:nth-child(43) .text::first-letter,
+.item:nth-child(50) .text::first-letter,
+.item:nth-child(57) .text::first-letter,
+.item:nth-child(64) .text::first-letter,
+.item:nth-child(71) .text::first-letter 
+{
+  font-size: 5px !important;
+}
+
+.item:nth-child(1) .text {
+  font-size: 5px !important;
+  color: #f7b906;
+}
+
+/*//////////// -- +10 dólares -- ///////////////*/
+.item:nth-child(8) .label,
+.item:nth-child(15) .label,
+.item:nth-child(22) .label,
+.item:nth-child(29) .label,
+.item:nth-child(36) .label,
+.item:nth-child(43) .label,
+.item:nth-child(50) .label,
+.item:nth-child(57) .label,
+.item:nth-child(64) .label,
+.item:nth-child(71) .label 
+{
+  font-size: 8px !important;
+  font-weight: 600 !important;
+  color: rgba(0, 0, 0, 0.75) !important;
+  
+}
+
+/*//////////// -- 1 dólar -- ///////////////*/
+.item:nth-child(2) .label,
+.item:nth-child(4) .label,
+.item:nth-child(6) .label,
+.item:nth-child(9) .label,
+.item:nth-child(11) .label,
+.item:nth-child(13) .label,
+.item:nth-child(16) .label,
+.item:nth-child(18) .label,
+.item:nth-child(20) .label,
+.item:nth-child(23) .label,
+.item:nth-child(25) .label,
+.item:nth-child(27) .label,
+.item:nth-child(30) .label,
+.item:nth-child(32) .label,
+.item:nth-child(34) .label,
+.item:nth-child(37) .label,
+.item:nth-child(39) .label,
+.item:nth-child(41) .label,
+.item:nth-child(44) .label,
+.item:nth-child(46) .label,
+.item:nth-child(48) .label,
+.item:nth-child(51) .label,
+.item:nth-child(53) .label,
+.item:nth-child(55) .label,
+.item:nth-child(58) .label,
+.item:nth-child(60) .label,
+.item:nth-child(62) .label,
+.item:nth-child(65) .label,
+.item:nth-child(67) .label,
+.item:nth-child(69) .label,
+.item:nth-child(72) .label,
+.item:nth-child(74) .label,
+.item:nth-child(76) .label
+{
+  color: #3335ae !important;
+  font-weight: 600 !important;
+}
+
+
+
+/*//////////// -- 2 dólar -- ///////////////*/
+.item:nth-child(3) .label,
+.item:nth-child(5) .label,
+.item:nth-child(7) .label,
+.item:nth-child(10) .label,
+.item:nth-child(12) .label,
+.item:nth-child(14) .label,
+.item:nth-child(17) .label,
+.item:nth-child(19) .label,
+.item:nth-child(21) .label,
+.item:nth-child(24) .label,
+.item:nth-child(26) .label,
+.item:nth-child(28) .label,
+.item:nth-child(31) .label,
+.item:nth-child(33) .label,
+.item:nth-child(35) .label,
+.item:nth-child(38) .label,
+.item:nth-child(40) .label,
+.item:nth-child(42) .label,
+.item:nth-child(45) .label,
+.item:nth-child(47) .label,
+.item:nth-child(49) .label,
+.item:nth-child(52) .label,
+.item:nth-child(54) .label,
+.item:nth-child(56) .label,
+.item:nth-child(59) .label,
+.item:nth-child(61) .label,
+.item:nth-child(63) .label,
+.item:nth-child(66) .label,
+.item:nth-child(68) .label,
+.item:nth-child(70) .label,
+.item:nth-child(73) .label,
+.item:nth-child(75) .label,
+.item:nth-child(77) .label
+{
+  color: #0f3925 !important;
+  font-weight: 600 !important;
+}
+
+
+
+
+/*//////////////////////////////////*/
+/*//////////////////////////////////*/
+/*//////////////////////////////////*/
+
+.roulette .shadow {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  box-shadow: 0 0.3em 0 rgba(0, 0, 0, 0.25) inset;
+}
+.roulette .markers {
+  display: block;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  overflow: hidden;
+  border-radius: 100%;
+}
+.roulette .markers .marker {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -200px;
+  left: 200px;
+  -webkit-transform-origin: 0% 400px;
+          transform-origin: 0% 400px;
+  border: 0 solid transparent;
+}
+.roulette .markers .triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 1em 0 1em 1em;
+  border-color: transparent transparent transparent #007bff;
+  position: absolute;
+  border-left-color: #FFF;
+  top: 50%;
+  left: -4px;
+  margin-top: -16.5px;
+  -webkit-filter: drop-shadow(0 0.25em 0 rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0 0.25em 0 rgba(0, 0, 0, 0.25));
+}
+.roulette .spinner {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-transform: rotateZ(0deg);
+          transform: rotateZ(0deg);
+  /*performance boost*/
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.roulette .spinner .item {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -200px;
+  left: 200px;
+  -webkit-transform-origin: 0% 400px;
+          transform-origin: 0% 400px;
+  border: 0 solid transparent;
+}
+
+.roulette .spinner .item .label {
+  display: block;
+  position: absolute;
+  color: #FFF;
+  font-weight: 100;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+.roulette .spinner .item .label i, .roulette .spinner .item .label .text {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  font-size: 0.63em;
+  text-indent: 0;
+}
+.roulette .spinner .item .label i {
+  margin-right: 0.1em;
+}
+
+.button {
+    font-family: 'AnandaNeptouch';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    width: 10rem;
+    height: 3rem;
+    font-size: 1.8rem;
+    border-radius: 5px;
+    position: absolute;
+    background-image: linear-gradient(to bottom, #c19d4a, #f8f8c0, #c19d4a);
+    box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px, rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px, rgb(0 0 0 / 9%) 0px -3px 5px;
+    left: 50%;
+    bottom: -200px;
+    transform: translate(-50%, -50%) scale(1.3);
+    z-index: 999;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: -webkit-transform 0.15s;
+    transition: transform 0.15s;
+    transition: transform 0.15s, -webkit-transform 0.15s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@media (max-width: 450px) {
+    .button {
+        bottom: -250px;
+        transform: translate(-50%, -50%) scale(1.8);
+    }
+}
+
+.roulette .button:hover {
+  color: inherit;
+}
+
+.roulette.busy .button {
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  cursor: default;
+}
+
+/* CUSTOM LABELS */
+.roulette .spinner .item[data-type="quiz"] .label {
+  font-size: 1.5em;
+}
+.roulette .spinner .item[data-type="question"] .label {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+.roulette .spinner .item[data-type="replay"] .label .text {
+  font-size: .6em;
+  white-space: initial;
+  width: 1em;
+  text-align: center;
+  line-height: 1.2;
+}
+.roulette .spinner .item[data-type="replay"] .label i {
+  font-size: 1.5em;
+}
+.roulette .spinner .item[data-type="time"] .label i {
+  font-size: 1.5em;
+}
+

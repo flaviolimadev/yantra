@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latinbets - A melhor casa de apostas da america latina</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/style.css">
+  
+    <style type="text/css">
+        .encerraraposta-bilhete {
+            color: #FFF;
+            background-color: #ce9513;
+            font-weight: 600;
+            font-size: 12px;
+            padding: 10px 50px !important;
+            border: 2px solid #FFF;
+            border-radius: 5px;
+        }
+        .main-meusbilhetes {
+        width: 80vw;
+        min-height: 400px;
+        }
+
+        .main-meusbilhetes .header-meusbilhetes {
+        margin-top: 1%;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 5px;
+        position: relative;
+        padding: 0px;
+        }
+
+        .main-meusbilhetes .header-meusbilhetes .left {
+        background-color: rgba(0, 0, 0, 0.3);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0.75rem;
+        border-radius: 10px;
+        }
+
+        .main-meusbilhetes .header-meusbilhetes ul {
+        display: flex;
+        }
+
+        .main-meusbilhetes .header-meusbilhetes ul li {
+        margin-right: 10px !important;
+        font-size: 12px;
+        font-weight: 500;
+        padding-bottom: 10px !important;
+        }
+
+        .main-meusbilhetes .header-meusbilhetes ul li a {
+        white-space: nowrap;
+
+        top: 6px;
+        color: #FFF;
+        display: block;
+        padding: 9px 5px !important;
+        }
+
+        .header-meusbilhetes ul .item.selected {
+        border-bottom: 3px solid #f7b207;
+        }
+
+        .title-meusbilhetes {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        color: #FFF;
+        border-radius: 5px;
+        padding: 7px 5px !important;
+        top: 10px;
+        }
+
+        .title-tiposbilhetes {
+
+        font-size: 15px;
+        font-weight: 600;
+        color: #FFF;
+        padding: 10px 0px !important;
+        margin-left: 13px !important;
+
+        }
+        .bilhetes-aovoivo .collapse .title-tiposbilhetes{
+        display: flex;
+        flex-direction: column;
+        }
+
+        .conteudo-bilhetes {
+            margin: 10px;
+            border-radius: 5px;
+            color: #FFF;
+            font-size: 12px;
+            background-color: rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .valoretipo-apostabilhete {
+        font-weight: 600;
+        font-size: 15px;
+        padding: 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        position: relative;
+        }
+
+        .subtitle-valoretipo {
+            font-size: 11px;
+            font-weight: normal;
+            margin-left: 1%;
+            display: flex;
+            align-items: center;
+        }
+
+        .subtitle-valoretipo span {
+            margin: 0 !important;
+            position: absolute;
+            right: 10px;
+            border-radius: 5px;
+            font-weight: 600;
+            color: #FFF !important;
+            padding: 2px 5px;
+            min-width: 80px;
+            text-align: center;
+            border-width: medium;
+            border-style: solid;
+            border-color: transparent;
+            font-size: 13px;
+        }
+
+        .titulo-aposta {
+        padding: 10px;
+        }
+
+        .titulo-aposta div {
+        font-size: 14px;
+        font-weight: 600;
+        }
+
+        .titulo-aposta.odd {
+        margin-left: 15%;
+        }
+
+        .condicoes-aposta {
+        padding: 10px;
+        border-bottom: 1px solid #323b45;
+        }
+
+        .item-condicoes {
+        margin-bottom: 2%;
+        }
+
+        .subtitle-condicoes {
+        font-size: 11px;
+        }
+
+        .resultado-bilhete {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        }
+
+        .resultado-bilhete div {
+        width: 50%;
+        }
+
+        .valor-footerbilhete {
+        font-size: 15px;
+        font-weight: 600;
+        }
+
+        .encerraraposta-bilhete-cima {
+        color: #FFF;
+        background-color: #ce9513;
+        font-weight: 600;
+        font-size: 12px;
+        padding: 6px 10px !important;
+        border: 2px solid #FFF;
+        border-radius: 5px;
+        display: block;
+        }
+
+        .encerraraposta-bilhete {
+        color: #FFF;
+        background-color: #f12c4c;
+        font-weight: 600;
+        font-size: 12px;
+        padding: 10px 50px !important;
+        border: 2px solid #FFF;
+        border-radius: 5px;
+        }
+
+        .valor-encerraraposta {
+        font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="area-logo">
+        <a href="#">
+            <img src="img/logo.png" alt="Latinbets" width="250px">
+        </a>
+        </div>
+
+        <div class="title-perfil">
+        <div class="left">
+            <span>Dashborad do usuário</span>
+        </div>
+
+        <div class="right">
+            <a href="../" class="btn-fechar">
+            <div>
+                <img src="img/icones/x.png" alt="Fechar" width="20px">
+            </div>
+            <span class="esc">ESC</span>
+            </a>
+        </div>
+        </div>
+
+        <nav id="nav">
+        <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu
+            <span id="hamburger"></span>
+        </button>
+        <ul id="menu" role="menu">
+            <li data-bs-toggle="collapse" data-bs-target="#collapseCart" aria-expanded="false" aria-controls="collapseCart">
+                <a href="#" class="">
+                    <img src="img/icones/carteira.png" alt="Sua Carteira" width="20px">
+                    Carteira
+                </a>
+            </li>
+
+            <ul class="collapse" id="collapseCart" style="border-radius: 25px; background-color: rgba(0, 0, 0, 0.3); padding: 10px;">
+                <li>
+                    <a href="carteira.html">
+                        <img src="img/icones/saldo.png" alt="Sua Carteira" width="20px">
+                        Saldo
+                    </a>
+                </li>
+                <li>
+                    <a href="deposito.html" class="">
+                        <img src="img/icones/deposito.png" alt="Depósito" width="20px">
+                        Depósito
+                     </a>
+                </li>
+                <li>
+                    <a href="saque.html" class="">
+                        <img src="img/icones/saque.png" alt="Saque" width="20px">
+                        Saque
+                    </a>
+                </li>
+            </ul>
+
+            <li>
+                <a href="bonus.html" class="">
+                    <img src="img/icones/bonus.png" alt="Seus Bônus" width="20px">
+                    Bônus
+                </a>
+            </li>
+
+            <li>
+                <a href="apostas.html" class="">
+                    <img src="img/icones/apostas.png" alt="Suas Apostas" width="20px">
+                    Apostas
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html" class="">
+                    <img src="img/icones/perfil.png" alt="Dados da sua Conta" width="20px">
+                    Conta
+                </a>
+            </li>
+
+            <li>
+                <a href="notificacoes.html" class="">
+                    <img src="img/icones/notificacao.png" alt="Suas Notificações" width="20px">
+                    Notificações
+                </a>
+            </li>
+
+            <li>
+                <a href="suporte.html" class="">
+                    <img src="img/icones/suporte.png" alt="Suporte" width="20px">
+                    Suporte
+                </a>
+            </li>
+
+            <li>
+                <a href="../logout.php" class="btn-sair">
+                    Sair
+                </a>
+            </li>
+        </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="menu-perfil">
+            <ul class="mb-5">
+                <li data-bs-toggle="collapse" data-bs-target="#collapseCart" aria-expanded="false" aria-controls="collapseCart">
+                    <a href="#">
+                        <img src="img/icones/carteira.png" alt="Sua Carteira" width="20px">
+                        Carteira
+                    </a>
+                </li>
+
+                <ul class="collapse" id="collapseCart" style="border-radius: 25px; background-color: rgba(0, 0, 0, 0.3); padding: 10px;">
+                    <li>
+                        <a href="carteira.html">
+                            <img src="img/icones/saldo.png" alt="Sua Carteira" width="20px">
+                            Saldo
+                        </a>
+                    </li>
+                    <li>
+                        <a href="deposito.html" class="">
+                            <img src="img/icones/deposito.png" alt="Depósito" width="20px">
+                            Depósito
+                         </a>
+                    </li>
+                    <li>
+                        <a href="saque.html" class="">
+                            <img src="img/icones/saque.png" alt="Saque" width="20px">
+                            Saque
+                        </a>
+                    </li>
+                </ul>
+
+                <li>
+                    <a href="bonus.html" class="">
+                        <img src="img/icones/bonus.png" alt="Seus Bônus" width="20px">
+                        Bônus
+                    </a>
+                </li>
+
+                <li>
+                    <a href="apostas.html" class="">
+                        <img src="img/icones/apostas.png" alt="Suas Apostas" width="20px">
+                        Apostas
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html" class="">
+                        <img src="img/icones/perfil.png" alt="Dados da sua Conta" width="20px">
+                        Conta
+                    </a>
+                </li>
+
+                <li>
+                    <a href="notificacoes.html" class="">
+                        <img src="img/icones/notificacao.png" alt="Suas Notificações" width="20px">
+                        Notificações
+                    </a>
+                </li>
+
+                <li>
+                    <a href="suporte.html" class="">
+                        <img src="img/icones/suporte.png" alt="Suporte" width="20px">
+                        Suporte
+                    </a>
+                </li>
+            </ul>
+
+            <div>
+                <a href="../logout.php" class="btn-sair">
+                Sair
+                </a>
+            </div>
+        </div>
+
+        <section class="main-meusbilhetes">
+            <div class="header-meusbilhetes">
+                <div class="left">
+                  <ul>
+                    <li class="item selected">
+                      <span class="title-meusbilhetes">Apostas:</span>
+                    </li>
+                    
+                    <li class="item">
+                      <a href="#multiCollapsePendentes" data-bs-toggle="collapse" aria-expanded="false" class="collapsed">Pendentes</a>
+                    </li>
+                    <li class="item">
+                      <a href="#multiCollapseResolvidos" data-bs-toggle="collapse" class="" aria-expanded="true">Resolvidos</a>
+                    </li>
+                    <!--
+                    <li class="item">
+                      <a href="#" data-bs-toggle="collapse" data-bs-target=".multi-collapse">Todos</a>
+                    </li>
+                    <li class="item">
+                      <a href="#" data-bs-toggle="collapse" data-bs-target="">Cassino</a>
+                    </li>
+                    -->
+                  </ul>
+                </div>
+            </div>
+        
+            <div class="bilhetes-aovoivo">
+              <div class="collapse multi-collapse" id="multiCollapseAovivo">
+                <p class="title-tiposbilhetes">Ao vivo</p>
+                              </div>
+            </div>
+            
+            <div class="bilhetes-aovoivo">
+              <div class="multi-collapse collapse show" id="multiCollapseResolvidos" style="">
+                <p class="title-tiposbilhetes">Resolvidos</p>
+                
+                    <div class="conteudo-bilhetes">
+                      <div class="valoretipo-apostabilhete" data-bs-toggle="collapse" data-bs-target="#collapseAovivo1">
+                        <span>BRL 5,00</span>
+                        
+                        <span class="subtitle-valoretipo"><span style="background-color: #f44336;color: black;">BRL 0,00</span></span>
+                      </div>
+        
+                      <div class="collapse" id="collapseAovivo1">
+        
+                         
+                        <div class="titulo-aposta">
+                          <div>
+                            <span>✅ Resultado Final - Casa</span>
+                           
+                          </div>
+                          <span>Fluminense x Corinthians </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 34.4913408</span><hr>
+        
+        
+                        </div>
+        
+                        
+                        <div class="titulo-aposta">
+                          <div>
+                            <span>✅ Resultado Final - visitante</span>
+                           
+                          </div>
+                          <span>EC Juventude x Atletico Mineiro </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 34.4913408</span><hr>
+        
+        
+                        </div>
+        
+                        
+                        <div class="titulo-aposta">
+                          <div>
+                            <span>❌ Resultado Final - Casa</span>
+                           
+                          </div>
+                          <span>Santos x Flamengo </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 34.4913408</span><hr>
+        
+        
+                        </div>
+        
+                        
+                        <div class="titulo-aposta">
+                          <div>
+                            <span>❌ Resultado Final - Casa</span>
+                           
+                          </div>
+                          <span>Ceara x Internacional </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 34.4913408</span><hr>
+        
+        
+                        </div>
+        
+                        
+                        <div class="titulo-aposta">
+                          <div>
+                            <span>❌ Resultado Final - Casa</span>
+                           
+                          </div>
+                          <span>Palmeiras x Athletico Paranaense </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 34.4913408</span><hr>
+        
+        
+                        </div>
+        
+                                        
+                        <div class="resultado-bilhete">
+                          <div>
+                            <span>Aposta</span>
+                            <br>
+                            <span class="valor-footerbilhete">BRL 5,00</span>
+                          </div>
+                          <div>
+                            <span>Ganhos potenciais</span>
+                            <br>
+                            <span class="valor-footerbilhete">BRL 172,46</span>
+                          </div>
+                          
+                          <!--
+                          <div>
+                            <a href="#" class="encerraraposta-bilhete">
+                              Encerrar Aposta
+                              <span class="valor-encerraraposta">BRL 0,00</span>
+                            </a>
+                          </div>
+                          -->
+                        </div>
+                      </div>
+                    </div>
+        
+        
+                
+                    <div class="conteudo-bilhetes">
+                      <div class="valoretipo-apostabilhete" data-bs-toggle="collapse" data-bs-target="#collapseAovivo2">
+                        <span>BRL 15,00</span>
+                        
+                        <span class="subtitle-valoretipo"><span style="background-color: #f44336;color: black;">BRL 0,00</span></span>
+                      </div>
+        
+                      <div class="collapse" id="collapseAovivo2">
+        
+                         
+                        <div class="titulo-aposta">
+                          <div>
+                            <span> Resultado Final - Casa</span>
+                           
+                          </div>
+                          <span>Nublense x Audax Italiano </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 24.8558625</span><hr>
+        
+        
+                        </div>
+        
+                        
+                        <div class="titulo-aposta">
+                          <div>
+                            <span> Resultado Final - Casa</span>
+                           
+                          </div>
+                          <span>New York Red Bulls x Atlanta United </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 24.8558625</span><hr>
+        
+        
+                        </div>
+        
+                        
+                        <div class="titulo-aposta">
+                          <div>
+                            <span> Resultado Final - Casa</span>
+                           
+                          </div>
+                          <span>Atlante x Club Atletico La Paz </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 24.8558625</span><hr>
+        
+        
+                        </div>
+        
+                        
+                        <div class="titulo-aposta">
+                          <div>
+                            <span> Resultado Final - visitante</span>
+                           
+                          </div>
+                          <span>Universidad Catolica x Sao Paulo </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 24.8558625</span><hr>
+        
+        
+                        </div>
+        
+                        
+                        <div class="titulo-aposta">
+                          <div>
+                            <span> Resultado Final - Casa</span>
+                           
+                          </div>
+                          <span>Fortaleza x Estudiantes LP </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 24.8558625</span><hr>
+        
+        
+                        </div>
+        
+                                        
+                        <div class="resultado-bilhete">
+                          <div>
+                            <span>Aposta</span>
+                            <br>
+                            <span class="valor-footerbilhete">BRL 15,00</span>
+                          </div>
+                          <div>
+                            <span>Ganhos potenciais</span>
+                            <br>
+                            <span class="valor-footerbilhete">BRL 372,84</span>
+                          </div>
+                          
+                          <!--
+                          <div>
+                            <a href="#" class="encerraraposta-bilhete">
+                              Encerrar Aposta
+                              <span class="valor-encerraraposta">BRL 0,00</span>
+                            </a>
+                          </div>
+                          -->
+                        </div>
+                      </div>
+                    </div>
+        
+        
+                
+                    <div class="conteudo-bilhetes">
+                      <div class="valoretipo-apostabilhete" data-bs-toggle="collapse" data-bs-target="#collapseAovivo3">
+                        <span>BRL 5,00</span>
+                        
+                        <span class="subtitle-valoretipo"><span style="background-color: #f44336;color: black;">BRL 0,00</span></span>
+                      </div>
+        
+                      <div class="collapse" id="collapseAovivo3">
+        
+                         
+                        <div class="titulo-aposta">
+                          <div>
+                            <span> Resultado Final - Casa</span>
+                           
+                          </div>
+                          <span>Nublense x Audax Italiano </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 4.7250000000000005</span><hr>
+        
+        
+                        </div>
+        
+                        
+                        <div class="titulo-aposta">
+                          <div>
+                            <span> Resultado Final - Casa</span>
+                           
+                          </div>
+                          <span>Atlante x Club Atletico La Paz </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 4.7250000000000005</span><hr>
+        
+        
+                        </div>
+        
+                        
+                        <div class="titulo-aposta">
+                          <div>
+                            <span> Resultado Final - Casa</span>
+                           
+                          </div>
+                          <span>Connecticut Rush Women x Connecticut Fusion Women </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 4.7250000000000005</span><hr>
+        
+        
+                        </div>
+        
+                        
+                        <div class="titulo-aposta">
+                          <div>
+                            <span> Resultado Final - visitante</span>
+                           
+                          </div>
+                          <span>Universidad Catolica x Sao Paulo </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 4.7250000000000005</span><hr>
+        
+        
+                        </div>
+        
+                        
+                        <div class="titulo-aposta">
+                          <div>
+                            <span> Resultado Final - Casa</span>
+                           
+                          </div>
+                          <span>Fortaleza x Estudiantes LP </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 4.7250000000000005</span><hr>
+        
+        
+                        </div>
+        
+                                        
+                        <div class="resultado-bilhete">
+                          <div>
+                            <span>Aposta</span>
+                            <br>
+                            <span class="valor-footerbilhete">BRL 5,00</span>
+                          </div>
+                          <div>
+                            <span>Ganhos potenciais</span>
+                            <br>
+                            <span class="valor-footerbilhete">BRL 23,63</span>
+                          </div>
+                          
+                          <!--
+                          <div>
+                            <a href="#" class="encerraraposta-bilhete">
+                              Encerrar Aposta
+                              <span class="valor-encerraraposta">BRL 0,00</span>
+                            </a>
+                          </div>
+                          -->
+                        </div>
+                      </div>
+                    </div>
+        
+        
+                
+                    <div class="conteudo-bilhetes">
+                      <div class="valoretipo-apostabilhete" data-bs-toggle="collapse" data-bs-target="#collapseAovivo4">
+                        <span>BRL 5,00</span>
+                        
+                        <span class="subtitle-valoretipo"><span style="background-color: #f44336;color: black;">BRL 0,00</span></span>
+                      </div>
+        
+                      <div class="collapse" id="collapseAovivo4">
+        
+                         
+                        <div class="titulo-aposta">
+                          <div>
+                            <span> Resultado Final - Casa</span>
+                           
+                          </div>
+                          <span>Atlante x Club Atletico La Paz </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 83.12905124999999</span><hr>
+        
+        
+                        </div>
+        
+                        
+                        <div class="titulo-aposta">
+                          <div>
+                            <span> Resultado Final - Casa</span>
+                           
+                          </div>
+                          <span>Universidad Catolica x Sao Paulo </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 83.12905124999999</span><hr>
+        
+        
+                        </div>
+        
+                        
+                        <div class="titulo-aposta">
+                          <div>
+                            <span> Resultado Final - Casa</span>
+                           
+                          </div>
+                          <span>Olimpia Asuncion x Atletico Goianiense </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 83.12905124999999</span><hr>
+        
+        
+                        </div>
+        
+                        
+                        <div class="titulo-aposta">
+                          <div>
+                            <span> Resultado Final - Casa</span>
+                           
+                          </div>
+                          <span>Fortaleza x Estudiantes LP </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 83.12905124999999</span><hr>
+        
+        
+                        </div>
+        
+                        
+                        <div class="titulo-aposta">
+                          <div>
+                            <span> Resultado Final - Casa</span>
+                           
+                          </div>
+                          <span>New York Red Bulls x Atlanta United </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 83.12905124999999</span><hr>
+        
+        
+                        </div>
+        
+                        
+                        <div class="titulo-aposta">
+                          <div>
+                            <span> Resultado Final - Casa</span>
+                           
+                          </div>
+                          <span>Nublense x Audax Italiano </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 83.12905124999999</span><hr>
+        
+        
+                        </div>
+        
+                                        
+                        <div class="resultado-bilhete">
+                          <div>
+                            <span>Aposta</span>
+                            <br>
+                            <span class="valor-footerbilhete">BRL 5,00</span>
+                          </div>
+                          <div>
+                            <span>Ganhos potenciais</span>
+                            <br>
+                            <span class="valor-footerbilhete">BRL 415,65</span>
+                          </div>
+                          
+                          <!--
+                          <div>
+                            <a href="#" class="encerraraposta-bilhete">
+                              Encerrar Aposta
+                              <span class="valor-encerraraposta">BRL 0,00</span>
+                            </a>
+                          </div>
+                          -->
+                        </div>
+                      </div>
+                    </div>
+        
+        
+                
+                    <div class="conteudo-bilhetes">
+                      <div class="valoretipo-apostabilhete" data-bs-toggle="collapse" data-bs-target="#collapseAovivo5">
+                        <span>BRL 5,00</span>
+                        
+                        <span class="subtitle-valoretipo"><span style="background-color: #f44336;color: black;">BRL 0,00</span></span>
+                      </div>
+        
+                      <div class="collapse" id="collapseAovivo5">
+        
+                         
+                        <div class="titulo-aposta">
+                          <div>
+                            <span>  - Casa</span>
+                           
+                          </div>
+                          <span>The Strongest x Ceara </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 36.77751</span><hr>
+        
+        
+                        </div>
+        
+                        
+                        <div class="titulo-aposta">
+                          <div>
+                            <span>  - visitante</span>
+                           
+                          </div>
+                          <span>Cerro Porteno x Palmeiras </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 36.77751</span><hr>
+        
+        
+                        </div>
+        
+                        
+                        <div class="titulo-aposta">
+                          <div>
+                            <span>  - visitante</span>
+                           
+                          </div>
+                          <span>Velez Sarsfield x River Plate </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 36.77751</span><hr>
+        
+        
+                        </div>
+        
+                        
+                        <div class="titulo-aposta">
+                          <div>
+                            <span>  - visitante</span>
+                           
+                          </div>
+                          <span>Gremio Novorizontino x Vasco da Gama </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 36.77751</span><hr>
+        
+        
+                        </div>
+        
+                                        
+                        <div class="resultado-bilhete">
+                          <div>
+                            <span>Aposta</span>
+                            <br>
+                            <span class="valor-footerbilhete">BRL 5,00</span>
+                          </div>
+                          <div>
+                            <span>Ganhos potenciais</span>
+                            <br>
+                            <span class="valor-footerbilhete">BRL 183,89</span>
+                          </div>
+                          
+                          <!--
+                          <div>
+                            <a href="#" class="encerraraposta-bilhete">
+                              Encerrar Aposta
+                              <span class="valor-encerraraposta">BRL 0,00</span>
+                            </a>
+                          </div>
+                          -->
+                        </div>
+                      </div>
+                    </div>
+        
+        
+                
+                    <div class="conteudo-bilhetes">
+                      <div class="valoretipo-apostabilhete" data-bs-toggle="collapse" data-bs-target="#collapseAovivo6">
+                        <span>BRL 25,00</span>
+                        
+                        <span class="subtitle-valoretipo"><span style="background-color: #f44336;color: black;">BRL 0,00</span></span>
+                      </div>
+        
+                      <div class="collapse" id="collapseAovivo6">
+        
+                         
+                        <div class="titulo-aposta">
+                          <div>
+                            <span>  - visitante</span>
+                           
+                          </div>
+                          <span>Cerro Porteno x Palmeiras </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 38.147999999999996</span><hr>
+        
+        
+                        </div>
+        
+                        
+                        <div class="titulo-aposta">
+                          <div>
+                            <span>  - visitante</span>
+                           
+                          </div>
+                          <span>Tapatio x Alacranes de Durango </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 38.147999999999996</span><hr>
+        
+        
+                        </div>
+        
+                        
+                        <div class="titulo-aposta">
+                          <div>
+                            <span>  - visitante</span>
+                           
+                          </div>
+                          <span>The Strongest x Ceara </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 38.147999999999996</span><hr>
+        
+        
+                        </div>
+        
+                        
+                        <div class="titulo-aposta">
+                          <div>
+                            <span>  - visitante</span>
+                           
+                          </div>
+                          <span>Nautico Capibaribe x Criciuma </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 38.147999999999996</span><hr>
+        
+        
+                        </div>
+        
+                                        
+                        <div class="resultado-bilhete">
+                          <div>
+                            <span>Aposta</span>
+                            <br>
+                            <span class="valor-footerbilhete">BRL 25,00</span>
+                          </div>
+                          <div>
+                            <span>Ganhos potenciais</span>
+                            <br>
+                            <span class="valor-footerbilhete">BRL 953,70</span>
+                          </div>
+                          
+                          <!--
+                          <div>
+                            <a href="#" class="encerraraposta-bilhete">
+                              Encerrar Aposta
+                              <span class="valor-encerraraposta">BRL 0,00</span>
+                            </a>
+                          </div>
+                          -->
+                        </div>
+                      </div>
+                    </div>
+        
+        
+                
+                    <div class="conteudo-bilhetes">
+                      <div class="valoretipo-apostabilhete" data-bs-toggle="collapse" data-bs-target="#collapseAovivo7">
+                        <span>BRL 25,00</span>
+                        
+                        <span class="subtitle-valoretipo"><span style="background-color: #f44336;color: black;">BRL 0,00</span></span>
+                      </div>
+        
+                      <div class="collapse" id="collapseAovivo7">
+        
+                         
+                        <div class="titulo-aposta">
+                          <div>
+                            <span>  - visitante</span>
+                           
+                          </div>
+                          <span>Cerro Porteno x Palmeiras </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 38.147999999999996</span><hr>
+        
+        
+                        </div>
+        
+                        
+                        <div class="titulo-aposta">
+                          <div>
+                            <span>  - visitante</span>
+                           
+                          </div>
+                          <span>Tapatio x Alacranes de Durango </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 38.147999999999996</span><hr>
+        
+        
+                        </div>
+        
+                        
+                        <div class="titulo-aposta">
+                          <div>
+                            <span>  - visitante</span>
+                           
+                          </div>
+                          <span>The Strongest x Ceara </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 38.147999999999996</span><hr>
+        
+        
+                        </div>
+        
+                        
+                        <div class="titulo-aposta">
+                          <div>
+                            <span>  - visitante</span>
+                           
+                          </div>
+                          <span>Nautico Capibaribe x Criciuma </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 38.147999999999996</span><hr>
+        
+        
+                        </div>
+        
+                                        
+                        <div class="resultado-bilhete">
+                          <div>
+                            <span>Aposta</span>
+                            <br>
+                            <span class="valor-footerbilhete">BRL 25,00</span>
+                          </div>
+                          <div>
+                            <span>Ganhos potenciais</span>
+                            <br>
+                            <span class="valor-footerbilhete">BRL 953,70</span>
+                          </div>
+                          
+                          <!--
+                          <div>
+                            <a href="#" class="encerraraposta-bilhete">
+                              Encerrar Aposta
+                              <span class="valor-encerraraposta">BRL 0,00</span>
+                            </a>
+                          </div>
+                          -->
+                        </div>
+                      </div>
+                    </div>
+        
+        
+                
+                    <div class="conteudo-bilhetes">
+                      <div class="valoretipo-apostabilhete" data-bs-toggle="collapse" data-bs-target="#collapseAovivo8">
+                        <span>BRL 25,00</span>
+                        
+                        <span class="subtitle-valoretipo"><span style="background-color: #9e9e9e;color: black;">Estornada</span></span>
+                      </div>
+        
+                      <div class="collapse" id="collapseAovivo8">
+        
+                         
+                        <div class="titulo-aposta">
+                          <div>
+                            <span>  - Pyramids FC</span>
+                           
+                          </div>
+                          <span>Pyramids FC x Enppi </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 2</span><hr>
+        
+        
+                        </div>
+        
+                        
+                        <div class="titulo-aposta">
+                          <div>
+                            <span>  - Empate</span>
+                           
+                          </div>
+                          <span>FK Qarabag x CS U Craiova </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 2</span><hr>
+        
+        
+                        </div>
+        
+                                        
+                        <div class="resultado-bilhete">
+                          <div>
+                            <span>Aposta</span>
+                            <br>
+                            <span class="valor-footerbilhete">BRL 25,00</span>
+                          </div>
+                          <div>
+                            <span>Ganhos potenciais</span>
+                            <br>
+                            <span class="valor-footerbilhete">BRL 50,00</span>
+                          </div>
+                          
+                          <!--
+                          <div>
+                            <a href="#" class="encerraraposta-bilhete">
+                              Encerrar Aposta
+                              <span class="valor-encerraraposta">BRL 0,00</span>
+                            </a>
+                          </div>
+                          -->
+                        </div>
+                      </div>
+                    </div>
+        
+        
+                
+                    <div class="conteudo-bilhetes">
+                      <div class="valoretipo-apostabilhete" data-bs-toggle="collapse" data-bs-target="#collapseAovivo9">
+                        <span>BRL 25,00</span>
+                        
+                        <span class="subtitle-valoretipo"><span style="background-color: #f44336;color: black;">BRL 0,00</span></span>
+                      </div>
+        
+                      <div class="collapse" id="collapseAovivo9">
+        
+                         
+                        <div class="titulo-aposta">
+                          <div>
+                            <span>  - visitante</span>
+                           
+                          </div>
+                          <span>The Strongest x Ceara </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 127.73799999999997</span><hr>
+        
+        
+                        </div>
+        
+                        
+                        <div class="titulo-aposta">
+                          <div>
+                            <span>  - visitante</span>
+                           
+                          </div>
+                          <span>Cerro Porteno x Palmeiras </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 127.73799999999997</span><hr>
+        
+        
+                        </div>
+        
+                        
+                        <div class="titulo-aposta">
+                          <div>
+                            <span>  - visitante</span>
+                           
+                          </div>
+                          <span>Deportivo Tachira x Santos </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 127.73799999999997</span><hr>
+        
+        
+                        </div>
+        
+                        
+                        <div class="titulo-aposta">
+                          <div>
+                            <span>  - visitante</span>
+                           
+                          </div>
+                          <span>Deportes Tolima x Flamengo </span><br><br>
+                    <!--      <span>Data do evento: </span><br>    -->
+                           <!-- <span style="margin-left: 5%;">Data do Boletim: #$row["data"] </span><br> -->
+                          <span>Odd: 127.73799999999997</span><hr>
+        
+        
+                        </div>
+        
+                                        
+                        <div class="resultado-bilhete">
+                          <div>
+                            <span>Aposta</span>
+                            <br>
+                            <span class="valor-footerbilhete">BRL 25,00</span>
+                          </div>
+                          <div>
+                            <span>Ganhos potenciais</span>
+                            <br>
+                            <span class="valor-footerbilhete">BRL 3.193,45</span>
+                          </div>
+                          
+                          <!--
+                          <div>
+                            <a href="#" class="encerraraposta-bilhete">
+                              Encerrar Aposta
+                              <span class="valor-encerraraposta">BRL 0,00</span>
+                            </a>
+                          </div>
+                          -->
+                        </div>
+                      </div>
+                    </div>
+        
+        
+                      </div>
+            </div>
+
+            <div class="bilhetes-aovoivo">
+              <div class="multi-collapse collapse" id="multiCollapsePendentes" style="">
+                <p class="title-tiposbilhetes">Pendentes</p>
+                      </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

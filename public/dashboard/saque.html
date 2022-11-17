@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latinbets - A melhor casa de apostas da america latina</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        div#collapseValor {
+            margin-bottom: 100px;
+        }
+        .card.card-body {
+            padding: 0px !important;    
+        }
+        .infos-deposito .btn-padrao {
+            background-image: none;
+            background-color: #dc3545 !important;
+            color: #FFF;
+            padding: 10px 20px;
+        }
+        
+        #formaDeposito {
+            display: block;
+            padding: 10px;
+            border-radius: 10px 10px 0 0px;
+            border-bottom: 4px solid rgba(0, 0, 0, 0.2);
+            font-size: 18px;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+    </style>    
+</head>
+<body>
+    <header>
+        <div class="area-logo">
+        <a href="#">
+            <img src="img/logo.png" alt="Latinbets" width="250px">
+        </a>
+        </div>
+
+        <div class="title-perfil">
+        <div class="left">
+            <span>Dashborad do usuário</span>
+        </div>
+
+        <div class="right">
+            <a href="../" class="btn-fechar">
+            <div>
+                <img src="img/icones/x.png" alt="Fechar" width="20px">
+            </div>
+            <span class="esc">ESC</span>
+            </a>
+        </div>
+        </div>
+
+        <nav id="nav">
+        <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu
+            <span id="hamburger"></span>
+        </button>
+        <ul id="menu" role="menu">
+            <li data-bs-toggle="collapse" data-bs-target="#collapseCart" aria-expanded="false" aria-controls="collapseCart">
+                <a href="#" class="">
+                    <img src="img/icones/carteira.png" alt="Sua Carteira" width="20px">
+                    Carteira
+                </a>
+            </li>
+
+            <ul class="collapse" id="collapseCart" style="border-radius: 25px; background-color: rgba(0, 0, 0, 0.3); padding: 10px;">
+                <li>
+                    <a href="carteira.html">
+                        <img src="img/icones/saldo.png" alt="Sua Carteira" width="20px">
+                        Saldo
+                    </a>
+                </li>
+                <li>
+                    <a href="deposito.html" class="">
+                        <img src="img/icones/deposito.png" alt="Depósito" width="20px">
+                        Depósito
+                     </a>
+                </li>
+                <li>
+                    <a href="saque.html" class="">
+                        <img src="img/icones/saque.png" alt="Saque" width="20px">
+                        Saque
+                    </a>
+                </li>
+            </ul>
+
+            <li>
+                <a href="bonus.html" class="">
+                    <img src="img/icones/bonus.png" alt="Seus Bônus" width="20px">
+                    Bônus
+                </a>
+            </li>
+
+            <li>
+                <a href="apostas.html" class="">
+                    <img src="img/icones/apostas.png" alt="Suas Apostas" width="20px">
+                    Apostas
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html" class="">
+                    <img src="img/icones/perfil.png" alt="Dados da sua Conta" width="20px">
+                    Conta
+                </a>
+            </li>
+
+            <li>
+                <a href="notificacoes.html" class="">
+                    <img src="img/icones/notificacao.png" alt="Suas Notificações" width="20px">
+                    Notificações
+                </a>
+            </li>
+
+            <li>
+                <a href="suporte.html" class="">
+                    <img src="img/icones/suporte.png" alt="Suporte" width="20px">
+                    Suporte
+                </a>
+            </li>
+
+            <li>
+                <a href="../logout.php" class="btn-sair">
+                    Sair
+                </a>
+            </li>
+        </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="menu-perfil">
+            <ul class="mb-5">
+                <li data-bs-toggle="collapse" data-bs-target="#collapseCart" aria-expanded="false" aria-controls="collapseCart">
+                    <a href="#">
+                        <img src="img/icones/carteira.png" alt="Sua Carteira" width="20px">
+                        Carteira
+                    </a>
+                </li>
+
+                <ul class="collapse" id="collapseCart" style="border-radius: 25px; background-color: rgba(0, 0, 0, 0.3); padding: 10px;">
+                    <li>
+                        <a href="carteira.html">
+                            <img src="img/icones/saldo.png" alt="Sua Carteira" width="20px">
+                            Saldo
+                        </a>
+                    </li>
+                    <li>
+                        <a href="deposito.html" class="">
+                            <img src="img/icones/deposito.png" alt="Depósito" width="20px">
+                            Depósito
+                         </a>
+                    </li>
+                    <li>
+                        <a href="saque.html" class="">
+                            <img src="img/icones/saque.png" alt="Saque" width="20px">
+                            Saque
+                        </a>
+                    </li>
+                </ul>
+
+                <li>
+                    <a href="bonus.html" class="">
+                        <img src="img/icones/bonus.png" alt="Seus Bônus" width="20px">
+                        Bônus
+                    </a>
+                </li>
+
+                <li>
+                    <a href="apostas.html" class="">
+                        <img src="img/icones/apostas.png" alt="Suas Apostas" width="20px">
+                        Apostas
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html" class="">
+                        <img src="img/icones/perfil.png" alt="Dados da sua Conta" width="20px">
+                        Conta
+                    </a>
+                </li>
+
+                <li>
+                    <a href="notificacoes.html" class="">
+                        <img src="img/icones/notificacao.png" alt="Suas Notificações" width="20px">
+                        Notificações
+                    </a>
+                </li>
+
+                <li>
+                    <a href="suporte.html" class="">
+                        <img src="img/icones/suporte.png" alt="Suporte" width="20px">
+                        Suporte
+                    </a>
+                </li>
+            </ul>
+
+            <div>
+                <a href="../logout.php" class="btn-sair">
+                Sair
+                </a>
+            </div>
+        </div>
+
+        <div class="conteudo-perfil">
+            <div class="title" data-bs-toggle="collapse" href="#collapsePagamento">
+                <img src="img/icones/passo1.png" alt="Etapa 1" width="30px">
+                <span>Métodos de Saque</span>
+            </div>
+            <div class="conteudo collapse" id="collapsePagamento">
+                <div class="card card-body" style="padding: 0px;">
+                    <div class="metodos-deposito">
+                        
+                        
+                        <a href="#collapseValor" data-bs-toggle="collapse">
+                            <div class="metodo">
+                              <div class="superior">
+                                
+                                <img src="img/pagamento/pix.png" alt="Pix" width="135px">
+                              </div>
+                              <div class="inferior">
+                                <span class="title-metodo">Pix</span>
+                                <br>
+                                <span class="subtitle-metodo">Até 7 dias</span>
+                              </div>             
+                            </div>
+                        </a>
+                        
+                    <!--    
+                        <a href="#collapseValor" data-bs-toggle="collapse">
+                            <div class="metodo">
+                              <div class="superior">
+                                
+                                <img src="https://f.donkhunter.com/_example/Payment_Wallet/2-ebb47-fill-1200-0.png" alt="Neteller" width="120px">
+                              </div>
+                              <div class="inferior">
+                                <span class="title-metodo">Neteller</span>
+                                <br>
+                                <span class="subtitle-metodo">Até 7 dias</span>
+                              </div>             
+                            </div>
+                        </a>
+                        
+                         <a href="#collapseValor" data-bs-toggle="collapse">
+                            <div class="metodo">
+                              <div class="superior">
+                                
+                                <img src="https://www.skrill.com/typo3conf/ext/theme2020/Resources/Public/images/Skrill-Logo.svg" alt="Neteller" width="120px">
+                              </div>
+                              <div class="inferior">
+                                <span class="title-metodo">Skrill</span>
+                                <br>
+                                <span class="subtitle-metodo">Até 7 dias</span>
+                              </div>             
+                            </div>
+                        </a>
+                        
+                        <a href="#collapseValor" data-bs-toggle="collapse">
+                            <div class="metodo winpay">
+                              <div class="superior">
+                                
+                                <img src="img/pagamento/winpay.png" alt="Winpay" width="100px">
+                              </div>
+                              <div class="inferior">
+                                <span class="title-metodo">Win Pay</span>
+                                <br>
+                                <span class="subtitle-metodo">Até 7 dias</span>
+                              </div> 
+                            </div>
+                        </a>
+                        
+                        -->
+                        
+        
+                        <a href="#collapseValor" data-bs-toggle="collapse">
+                            <div class="metodo usdt">
+                              <div class="superior">
+                                <img src="img/pagamento/usdt.png" alt="USDT" width="60px">
+                              </div>
+                              <div class="inferior">
+                                <span class="title-metodo">USDT</span>
+                                <br>
+                                <span class="subtitle-metodo">Até 7 dias</span>
+                              </div> 
+                            </div>
+                         </a>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="title" data-bs-toggle="collapse" href="#collapseValor">
+                <img src="img/icones/passo2.png" alt="Etapa 2" width="30px">
+                <span>Valor</span>
+            </div>
+            
+            <div class="conteudo collapse" id="collapseValor">
+                <div class="card card-body">
+                    <div class="valor-deposito">
+                        <div class="infos-deposito">
+                                <div class="box-saque">
+                                    <span id="formaDeposito">Solicitar saque</span>
+                                    <br>
+                                    
+      
+                                    <input id="cods" type="text" placeholder="Digite: Valor de Saque" name="cod">
+                                    <h6>*Certifique-se de inserir o usuário correto de sua conta.</h6>
+                                    <br>
+                                    <div>
+                                        <button class="btn-padrao" type="submit" onclick="saque()">Sacar</button>
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>           
+    </main>
+
+    <script src="js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

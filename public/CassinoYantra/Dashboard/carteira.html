@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latinbets - A melhor casa de apostas da america latina</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .menu-superior-right div {
+        padding: 10px;
+        font-size: 12px;
+        margin-left: 5px;
+        position: relative;
+    }
+    .perfil-superior {
+        margin-left: 0px !important;
+        padding: 0 !important;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .perfil-inferior {
+        margin-left: 0 !important;
+        padding: 0px !important;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        text-align: left;
+    }
+    .perfil-superior a {
+        color: #FFF;
+        white-space: nowrap;
+        font-weight: 700;
+    }
+  </style>
+  
+</head>
+<body>
+  <header>
+    <div class="area-logo">
+    <a href="#">
+        <img src="img/logo.png" alt="Latinbets" width="250px">
+    </a>
+    </div>
+
+    <div class="title-perfil">
+    <div class="left">
+        <span>Dashborad do usuário</span>
+    </div>
+
+    <div class="right">
+        <a href="../" class="btn-fechar">
+        <div>
+            <img src="img/icones/x.png" alt="Fechar" width="20px">
+        </div>
+        <span class="esc">ESC</span>
+        </a>
+    </div>
+    </div>
+
+    <nav id="nav">
+    <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu
+        <span id="hamburger"></span>
+    </button>
+    <ul id="menu" role="menu">
+        <li data-bs-toggle="collapse" data-bs-target="#collapseCart" aria-expanded="false" aria-controls="collapseCart">
+            <a href="#" class="">
+                <img src="img/icones/carteira.png" alt="Sua Carteira" width="20px">
+                Carteira
+            </a>
+        </li>
+
+        <ul class="collapse" id="collapseCart" style="border-radius: 25px; background-color: rgba(0, 0, 0, 0.3); padding: 10px;">
+            <li>
+                <a href="carteira.html">
+                    <img src="img/icones/saldo.png" alt="Sua Carteira" width="20px">
+                    Saldo
+                </a>
+            </li>
+            <li>
+                <a href="deposito.html" class="">
+                    <img src="img/icones/deposito.png" alt="Depósito" width="20px">
+                    Depósito
+                 </a>
+            </li>
+            <li>
+                <a href="saque.html" class="">
+                    <img src="img/icones/saque.png" alt="Saque" width="20px">
+                    Saque
+                </a>
+            </li>
+        </ul>
+
+        <li>
+            <a href="bonus.html" class="">
+                <img src="img/icones/bonus.png" alt="Seus Bônus" width="20px">
+                Bônus
+            </a>
+        </li>
+
+        <li>
+            <a href="apostas.html" class="">
+                <img src="img/icones/apostas.png" alt="Suas Apostas" width="20px">
+                Apostas
+            </a>
+        </li>
+
+        <li>
+            <a href="index.html" class="">
+                <img src="img/icones/perfil.png" alt="Dados da sua Conta" width="20px">
+                Conta
+            </a>
+        </li>
+
+        <li>
+            <a href="notificacoes.html" class="">
+                <img src="img/icones/notificacao.png" alt="Suas Notificações" width="20px">
+                Notificações
+            </a>
+        </li>
+
+        <li>
+            <a href="suporte.html" class="">
+                <img src="img/icones/suporte.png" alt="Suporte" width="20px">
+                Suporte
+            </a>
+        </li>
+
+        <li>
+            <a href="../logout.php" class="btn-sair">
+                Sair
+            </a>
+        </li>
+    </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="menu-perfil">
+        <ul class="mb-5">
+            <li data-bs-toggle="collapse" data-bs-target="#collapseCart" aria-expanded="false" aria-controls="collapseCart">
+                <a href="#">
+                    <img src="img/icones/carteira.png" alt="Sua Carteira" width="20px">
+                    Carteira
+                </a>
+            </li>
+
+            <ul class="collapse" id="collapseCart" style="border-radius: 25px; background-color: rgba(0, 0, 0, 0.3); padding: 10px;">
+                <li>
+                    <a href="carteira.html">
+                        <img src="img/icones/saldo.png" alt="Sua Carteira" width="20px">
+                        Saldo
+                    </a>
+                </li>
+                <li>
+                    <a href="deposito.html" class="">
+                        <img src="img/icones/deposito.png" alt="Depósito" width="20px">
+                        Depósito
+                     </a>
+                </li>
+                <li>
+                    <a href="saque.html" class="">
+                        <img src="img/icones/saque.png" alt="Saque" width="20px">
+                        Saque
+                    </a>
+                </li>
+            </ul>
+
+            <li>
+                <a href="bonus.html" class="">
+                    <img src="img/icones/bonus.png" alt="Seus Bônus" width="20px">
+                    Bônus
+                </a>
+            </li>
+
+            <li>
+                <a href="apostas.html" class="">
+                    <img src="img/icones/apostas.png" alt="Suas Apostas" width="20px">
+                    Apostas
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html" class="">
+                    <img src="img/icones/perfil.png" alt="Dados da sua Conta" width="20px">
+                    Conta
+                </a>
+            </li>
+
+            <li>
+                <a href="notificacoes.html" class="">
+                    <img src="img/icones/notificacao.png" alt="Suas Notificações" width="20px">
+                    Notificações
+                </a>
+            </li>
+
+            <li>
+                <a href="suporte.html" class="">
+                    <img src="img/icones/suporte.png" alt="Suporte" width="20px">
+                    Suporte
+                </a>
+            </li>
+        </ul>
+
+        <div>
+            <a href="../logout.php" class="btn-sair">
+            Sair
+            </a>
+        </div>
+    </div>
+
+    <div class="conteudo-perfil">
+      <div>
+          <span class="subtitle-perfil mobile">Dólar do dia <span>BRL 5,13</span> </span>
+      </div>
+      
+      <div class="title extrato" data-bs-toggle="collapse" href="#collapseCarteira">
+          <img src="img/icones/extrato.png" alt="Carteira do Usuário" width="30px">
+          <span>Carteira</span>
+      </div>
+
+      <div class="conteudo collapse show" id="collapseCarteira">
+          <div class="card card-body menu-superior-right">
+              <div class="perfil-superior">
+                  <div class="left" style="text-align: left">
+                      <span>Olá, <?= $_SESSION["usuario"];?></span>
+                      <div style="display: flex; align-items: center; padding: 0px !important; margin-left: 0 !important; gap: 7px; font-weight: 700;">
+                          <span style="font-size: 1.5rem;"><?= vdata($_SESSION["usuario"])["moeda"];?>  <span><?= number_format(vdata($_SESSION["usuario"])["entradas"], 2, ',', '.');?></span> </span>
+                          <a href="#" style="position: relative; top: 2px; font-size: 16px;"> <i class="fa-solid fa-arrow-rotate-right"></i> </a> 
+                      </div>
+                  </div>
+                  <!--
+                  <div class="right">
+                      <a href="#">
+                          <img src="assets/img/icones/deposit.png" width="25px">
+                          <span>Depositar</span>
+                      </a>
+                  </div>
+                  -->
+              </div>
+              <div class="perfil-inferior">
+                  <div>
+                      <span style="display: block;" translate="no">Créditos de Bônus</span>
+                      <span style="font-size: 1.5rem; font-weight: 700;"><?= vdata($_SESSION["usuario"])["moeda"];?> <span>0,00</span> </span>
+                  </div>
+                  <div>
+                      <span style="display: block;" translate="no">Prêmios de Bônus</span>
+                      <span style="font-size: 1.5rem; font-weight: 700;"><?= vdata($_SESSION["usuario"])["moeda"];?> <span><?=  number_format(vdata($_SESSION["usuario"])["premios"], 2, ',', '.');?></span> </span>
+                  </div>
+                  
+                  <img class="img-cadeado" src="img/icones/cadeado.png" width="16px">
+              </div>
+              <div style="padding-top: 0; text-align: left;">
+                  <span>Rollover Atual 1x</span>
+              </div>
+          </div>
+      </div>
+
+      <div class="title extrato" data-bs-toggle="collapse" href="#collapseExtrato">
+          <img src="img/icones/extrato.png" alt="Extrato Financeiro" width="30px">
+          <span>EXTRATO FINANCEIRO</span>
+      </div>
+
+      <div class="conteudo collapse show" id="collapseExtrato">
+        <div class="card card-body">
+          <div class="boxmainpgcaixa">
+              <div class="gestao-caixa">
+              <br>
+              <h2>Resumo da conta</h2>
+              
+              <?php if($_SESSION["usuario"] == "harpia"){ ?>
+              
+              <div class="cardscaixa">
+                  <div>
+                      <p>Apostas em Aberto</p>
+                      <h3 style="font-size: 20px;"><?= vdata($_SESSION["usuario"])["moeda"];?> <?=number_format($aberto, 2, ',', '.');?></h3>
+                  </div>
+                  <div>
+                      <p>Apostas</p>
+                      <h3 style="font-size: 20px;"><?= vdata($_SESSION["usuario"])["moeda"];?> 3.336,30</h3>
+                  </div>
+                  <div>
+                      <p>Prêmios</p>
+                      <h3 style="font-size: 20px;"><?= vdata($_SESSION["usuario"])["moeda"];?> 4.946,58</h3>
+                  </div>
+                  <div>
+                      <p>Cassino</p>
+                      <h3 style="font-size: 20px;"><?= vdata($_SESSION["usuario"])["moeda"];?> 0,00</h3>
+                  </div>
+                  <div id="total"> 
+                      <p>Total</p>
+                      <h3 style="font-size: 20px;"><?= vdata($_SESSION["usuario"])["moeda"];?> 1.610,28</h3>
+                  </div>
+              </div>
+              
+              <?php }else{ ?>
+              
+              
+              <div class="cardscaixa">
+                  <div>
+                      <p>Apostas em Aberto</p>
+                      <h3 style="font-size: 20px;"><?= vdata($_SESSION["usuario"])["moeda"];?> <?=number_format($aberto, 2, ',', '.');?></h3>
+                  </div>
+                  <div>
+                      <p>Apostas</p>
+                      <h3 style="font-size: 20px;"><?= vdata($_SESSION["usuario"])["moeda"];?> <?=number_format($apostas, 2, ',', '.');?></h3>
+                  </div>
+                  <div>
+                      <p>Prêmios</p>
+                      <h3 style="font-size: 20px;"><?= vdata($_SESSION["usuario"])["moeda"];?> <?=number_format($premios, 2, ',', '.');?></h3>
+                  </div>
+                  <div>
+                      <p>Cassino</p>
+                      <h3 style="font-size: 20px;"><?= vdata($_SESSION["usuario"])["moeda"];?> 0,00</h3>
+                  </div>
+                  <div id="total"> 
+                      <p>Total</p>
+                      <h3 style="font-size: 20px;"><?= vdata($_SESSION["usuario"])["moeda"];?> <?=number_format($premios - $apostas, 2, ',', '.');?></h3>
+                  </div>
+              </div>
+              
+              <?php } ?>
+          </div>
+          <div class="mainpgextrato">
+              <div class="table-responsive">
+              <br>
+              <h2>Extrato da conta</h2><br>
+              <table class="table-dark">
+                  <thead>
+                      <tr>
+                      <th scope="col">Data</th>
+                      <th scope="col">Valor</th>
+                      <th scope="col">Tipo</th>
+                      <th scope="col">Descrição</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                      <?php
+                      $query3 = "SELECT * FROM `solicitacoes` WHERE usuario = '{$_SESSION["usuario"]}'";
+                      $result3 = mysqli_query($conn, $query3);
+                      while ($row = mysqli_fetch_array($result3)){
+                      ?>
+                          <tr>
+                              <th scope="row"><?= $row["dataa"]; ?></th>
+                              <td><?=vdata($_SESSION['usuario'])["moeda"]?> <?= number_format($row["valor"], 2, ',', '.'); ?></td>
+                              <td><?= $row["metodo"]; ?></td>
+                              <td><?= $row["tipo"]; ?></td>
+                          </tr>
+                      <?php } ?>
+                  </tbody>
+          </table>
+          </div>
+          <br><br>
+      </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  </main>
+        
+  <script src="https://kit.fontawesome.com/a9ecbddeee.js" crossorigin="anonymous"></script>
+
+  <script src="js/script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

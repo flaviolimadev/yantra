@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latinbets - A melhor casa de apostas da america latina</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <header>
+        <div class="area-logo">
+        <a href="#">
+            <img src="img/logo.png" alt="Latinbets" width="250px">
+        </a>
+        </div>
+
+        <div class="title-perfil">
+        <div class="left">
+            <span>Dashborad do usuário</span>
+        </div>
+
+        <div class="right">
+            <a href="../" class="btn-fechar">
+            <div>
+                <img src="img/icones/x.png" alt="Fechar" width="20px">
+            </div>
+            <span class="esc">ESC</span>
+            </a>
+        </div>
+        </div>
+
+        <nav id="nav">
+        <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu
+            <span id="hamburger"></span>
+        </button>
+        <ul id="menu" role="menu">
+            <li data-bs-toggle="collapse" data-bs-target="#collapseCart" aria-expanded="false" aria-controls="collapseCart">
+                <a href="#" class="">
+                    <img src="img/icones/carteira.png" alt="Sua Carteira" width="20px">
+                    Carteira
+                </a>
+            </li>
+
+            <ul class="collapse" id="collapseCart" style="border-radius: 25px; background-color: rgba(0, 0, 0, 0.3); padding: 10px;">
+                <li>
+                    <a href="carteira.html">
+                        <img src="img/icones/saldo.png" alt="Sua Carteira" width="20px">
+                        Saldo
+                    </a>
+                </li>
+                <li>
+                    <a href="deposito.html" class="">
+                        <img src="img/icones/deposito.png" alt="Depósito" width="20px">
+                        Depósito
+                     </a>
+                </li>
+                <li>
+                    <a href="saque.html" class="">
+                        <img src="img/icones/saque.png" alt="Saque" width="20px">
+                        Saque
+                    </a>
+                </li>
+            </ul>
+
+            <li>
+                <a href="bonus.html" class="">
+                    <img src="img/icones/bonus.png" alt="Seus Bônus" width="20px">
+                    Bônus
+                </a>
+            </li>
+
+            <li>
+                <a href="apostas.html" class="">
+                    <img src="img/icones/apostas.png" alt="Suas Apostas" width="20px">
+                    Apostas
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html" class="">
+                    <img src="img/icones/perfil.png" alt="Dados da sua Conta" width="20px">
+                    Conta
+                </a>
+            </li>
+
+            <li>
+                <a href="notificacoes.html" class="">
+                    <img src="img/icones/notificacao.png" alt="Suas Notificações" width="20px">
+                    Notificações
+                </a>
+            </li>
+
+            <li>
+                <a href="suporte.html" class="">
+                    <img src="img/icones/suporte.png" alt="Suporte" width="20px">
+                    Suporte
+                </a>
+            </li>
+
+            <li>
+                <a href="../logout.php" class="btn-sair">
+                    Sair
+                </a>
+            </li>
+        </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="menu-perfil">
+            <ul class="mb-5">
+                <li data-bs-toggle="collapse" data-bs-target="#collapseCart" aria-expanded="false" aria-controls="collapseCart">
+                    <a href="#">
+                        <img src="img/icones/carteira.png" alt="Sua Carteira" width="20px">
+                        Carteira
+                    </a>
+                </li>
+
+                <ul class="collapse" id="collapseCart" style="border-radius: 25px; background-color: rgba(0, 0, 0, 0.3); padding: 10px;">
+                    <li>
+                        <a href="carteira.html">
+                            <img src="img/icones/saldo.png" alt="Sua Carteira" width="20px">
+                            Saldo
+                        </a>
+                    </li>
+                    <li>
+                        <a href="deposito.html" class="">
+                            <img src="img/icones/deposito.png" alt="Depósito" width="20px">
+                            Depósito
+                         </a>
+                    </li>
+                    <li>
+                        <a href="saque.html" class="">
+                            <img src="img/icones/saque.png" alt="Saque" width="20px">
+                            Saque
+                        </a>
+                    </li>
+                </ul>
+
+                <li>
+                    <a href="bonus.html" class="">
+                        <img src="img/icones/bonus.png" alt="Seus Bônus" width="20px">
+                        Bônus
+                    </a>
+                </li>
+
+                <li>
+                    <a href="apostas.html" class="">
+                        <img src="img/icones/apostas.png" alt="Suas Apostas" width="20px">
+                        Apostas
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html" class="">
+                        <img src="img/icones/perfil.png" alt="Dados da sua Conta" width="20px">
+                        Conta
+                    </a>
+                </li>
+
+                <li>
+                    <a href="notificacoes.html" class="">
+                        <img src="img/icones/notificacao.png" alt="Suas Notificações" width="20px">
+                        Notificações
+                    </a>
+                </li>
+
+                <li>
+                    <a href="suporte.html" class="">
+                        <img src="img/icones/suporte.png" alt="Suporte" width="20px">
+                        Suporte
+                    </a>
+                </li>
+            </ul>
+
+            <div>
+                <a href="../logout.php" class="btn-sair">
+                Sair
+                </a>
+            </div>
+        </div>
+
+        <div class="conteudo-perfil">
+            <div class="title senha" data-bs-toggle="collapse" href="#collapseSenha">
+              <img src="img/icones/mudar_senha.png" alt="Mudar Senha" width="30px">
+              <span>Mudar senha</span>
+            </div>
+            
+            <div class="conteudo senha collapse" id="collapseSenha">
+              <div class="card card-body">
+                <form action="#">
+                  <label for="senha-atual">Digite sua senha atual</label>
+                  <br>
+                  <input type="text" class="mb-3" id="senha-atual">
+      
+                  <br>
+      
+                  <label for="senha-nova">Digite a nova senha</label>
+                  <br>
+                  <input type="text" class="mb-3" id="senha-nova">
+      
+                  <br>
+      
+                  <label for="senha-nova2">Repetir senha</label>
+                  <br>
+                  <input type="text" class="mb-3" id="senha-nova2">
+      
+                  <p>Por questões de segurança, se você troca sua senha, você ficará impossibilitado de realizar saques nas próximas 48 horas.</p>
+      
+                  <a href="#" class="btn-confirmar">Mudar senha</a>
+                </form>
+              </div>
+            </div>
+      
+            <div class="title google" data-bs-toggle="collapse" href="#collapseGoogle">
+              <img src="img/icones/google_authenticator.png" alt="Google Authenticator" width="30px">
+              <span>Google Authenticator</span>
+            </div>
+            
+            <div class="conteudo collapse" id="collapseGoogle">
+              <div class="card card-body">
+                <h4>Disponível em breve . . .</h4>
+              </div>
+            </div>
+      
+            <div class="title info" data-bs-toggle="collapse" href="#collapseDados">
+              <img src="img/icones/informacoes_gerais.png" alt="Informações Gerais" width="30px">
+              <span>Informações Gerais</span>
+            </div>
+            
+            <div class="conteudo dados collapse" id="collapseDados">
+              <div class="card card-body">
+                <!-- <h4>Meus Dados</h4> -->
+                <form action="#" class="form-dados">
+                  
+                  <label for="nome"> Nome Completo</label>
+                  <input id="nome" class="form-control" type="text" placeholder="Nome Completo: <?=vdata($_SESSION["usuario"])["p_nome"];?>" aria-label="Disabled input example" disabled="">  
+                  
+                  <label for="user"> Usuário</label>
+                  <input id="user" class="form-control" type="text" placeholder="Usuáro: <?=vdata($_SESSION["usuario"])["usuario"];?>" aria-label="Disabled input example" disabled="">
+                  
+                  <label for="data-nas"> Data de Nascimento</label>
+                  <input id="data-nas" class="form-control" type="text" placeholder="Data de nascimento: <?=vdata($_SESSION["usuario"])["data"];?>" aria-label="Disabled input example" disabled="">
+                  
+                  <label for="doc-f"> Documento Fiscal</label>
+                  <input id="doc-f" class="form-control" type="text" placeholder="Número de documento fiscal: <?=vdata($_SESSION["usuario"])["cpf"];?>" aria-label="Disabled input example" disabled="">
+                  
+                  <label for="phone"> Telefone</label>
+                  <input id="phone" class="form-control" type="tel" placeholder="Telefone: <?=vdata($_SESSION["usuario"])["contato"];?>" aria-label="Disabled input example" disabled="">
+                  
+                  <label for="email"> E-mail</label>
+                  <input id="email" class="form-control" type="email" placeholder="E-mail: <?=vdata($_SESSION["usuario"])["email"];?>" aria-label="Disabled input example" disabled="">
+      
+                  <br>
+                  
+                  <label for="endereco"> Endereço</label>
+                  <input id="endereco" class="form-control" type="text" name="endereco" placeholder="Endereço: " aria-label="default input example" value="<?=vdata($_SESSION["usuario"])["end"];?>">
+                  
+                  <label for="bairro"> Bairro</label>
+                  <input id="bairro" class="form-control" type="text" name="bairro" placeholder="Bairro: " aria-label="default input example" value="<?=vdata($_SESSION["usuario"])["bairro"];?>">
+                  
+                  <label for="cidade"> Cidade</label>
+                  <input id="cidade" class="form-control" type="text" name="cidade" placeholder="Cidade: " aria-label="default input example" value="<?=vdata($_SESSION["usuario"])["cidade"];?>">
+                  
+                  <label for="uf"> UF</label>
+                  <input id="uf" class="form-control" type="text" name="uf" placeholder="UF: " aria-label="default input example" value="<?=vdata($_SESSION["usuario"])["uf"];?>">
+                  
+                  <label for="cep"> CEP</label>
+                  <input id="cep" class="form-control" type="text" name="cep" placeholder="CEP: " aria-label="default input example" value="<?=vdata($_SESSION["usuario"])["cep"];?>">
+      
+                <div class="col-auto"  style="text-align: center;">
+                  <button type="submit" class="btn-padrao btn btn-primary mb-3">Salvar</button>
+                </div>
+                </form>
+              </div>
+            </div>
+      
+            <div class="title google" data-bs-toggle="collapse" href="#collapseExtrato">
+              <img src="img/icones/google_authenticator.png" alt="Google Authenticator" width="30px">
+              <span>EXTRATO FINANCEIRO</span>
+            </div>
+            
+            <div class="conteudo collapse" id="collapseExtrato">
+              <div class="card card-body">
+                <h4>Disponível em breve . . .</h4>
+              </div>
+            </div>
+      
+            <div class="title conta" data-bs-toggle="collapse" href="#collapseVerificarConta">
+              <img src="img/icones/verificar_conta.png" alt="Verificar Conta" width="30px">
+              <span>Verificar Conta</span>
+            </div>
+
+            <div class="conteudo collapse" id="collapseVerificarConta">
+              <div class="card card-body">
+                <?php if(vdata($_SESSION["usuario"])["aprov"] == 0){ ?>
+        
+                  <div>
+                    <form action="#" class="validar-documents" method="POST" enctype="multipart/form-data">
+                      <h4 style="text-align: initial;">Enviar Fotos do Documento</h4>
+                      <div class="box-enviardocuments">
+                        <div style="width: 210px;">
+                          <label class="input-file">
+                            <img src="img/icones/documento.png" width="50px" alt="Foto da frente do documento">
+                            Frente
+                            <input type="file" class="form-control" id="" name="doc">
+                          </label>
+                        </div>
+        
+                        <div style="width: 210px;">
+                          <label class="input-file">
+                            <img src="img/icones/documento-verso.png" width="50px" alt="Foto do verso do documento">
+                            Verso
+                            <input type="file" class="form-control" id="" name="doc1">
+                          </label>
+                        </div>
+        
+                        <div style="width: 210px;">
+                          <label class="input-file">
+                            <img src="img/icones/selfie.png" width="50px" alt="Selfie segurando o documento">
+                            Selfie c/ documento
+                            <input type="file" class="form-control" id="" name="doc2">
+                          </label>
+                        </div>
+        
+                        <div style="width: 210px;"> 
+                          <label class="input-file">
+                            <img src="img/icones/comprovante.png" width="50px" alt="Comprovante de residência">
+                            Comp de Residência
+                            <input type="file" class="form-control" id="" name="doc3">
+                          </label>
+                        </div>
+                        
+                        
+                        <ol>
+                          <li>1-	Frente - Documento de Identificação original com Foto e Válido (Exemplos: Identidade, Passaporte ou Carteira de Motorista).</li>
+      
+                          <li>2-	Fundo - Documento de Identificação original e Válido (Exemplos: Identidade, Passaporte ou Carteira de Motorista).</li>
+      
+                          <li>3-	Selfie segurando o documento de identificação e uma folha escrita com a DATA DE HOJE, o nome e seu USUÁRIO. (Como exemplificado na imagem acima).</li>
+      
+                          <li>4-	Comprovante de Residência com a data, em nome do titular da conta com emissão dos últimos 3 meses. * Caso o comprovante seja em nome dos pais/filhos/irmãos ou do cônjuge, enviar documento que comprove o vínculo, via Ticket.  (Exemplos: conta de água, conta de luz, conta de TV por assinatura, conta de internet, conta de telefone).</li>
+                        </ol>
+                      </div>
+      
+                      <br>
+        
+                      <div class="col-auto" style="text-align: center; margin-top: 0 !important;">
+                        <button type="submit" class="btn-padrao btn btn-primary mb-3">Enviar</button>
+                      </div>
+                    </form>
+                
+              
+      
+               <?php } ?>
+        
+        
+               <?php if(vdata($_SESSION["usuario"])["aprov"] >= 1){ ?>
+               
+              
+               
+                 <form class="validar-documents dois" action="#" method="POST" enctype="multipart/form-data">
+                    <div class="box-enviardocuments">
+                        
+                      <?php if(vdata($_SESSION["usuario"])["doc_frente"] == "") { ?>    
+                      <div>
+                        <label class="input-file" style="background-color:#d59d13;height: 123px;">
+                          <img src="img/icones/documento.png" width="50px" alt="Foto da frente do documento">
+                          <span>EM ANÁLISE</span>
+                        </label>
+                      </div>
+                    
+                      <?php }elseif(vdata($_SESSION["usuario"])["doc_frente"] == "1"){ ?>
+                      
+                      <div style="width: 210px;">
+                          <label class="input-file">
+                            <img src="img/icones/documento.png" width="50px" alt="Foto da frente do documento">
+                            Frente
+                            <input type="file" class="form-control" id="" name="doc">
+                          </label>
+                        </div>
+                        
+                      
+                      
+                      <?php }else{ ?>
+                      
+                      <div>
+                        <label class="input-file" style="background-color:#66bb6a;height: 123px;">
+                          <img src="img/icones/documento.png" width="50px" alt="Foto da frente do documento">
+                          <span>APROVADO</span>
+                        </label>
+                      </div>
+                      
+                      <?php } ?>
+                      
+                      
+                      
+                      <?php if(vdata($_SESSION["usuario"])["doc_verso"] == "") { ?>  
+                      
+                      <div>
+                        <label class="input-file" style="background-color:#d59d13;height: 123px;">
+                          <img src="img/icones/documento-verso.png" width="50px" alt="Foto do verso do documento">
+                          <span>EM ANÁLISE</span>
+                        </label>
+                      </div>
+                      
+                      <?php }elseif(vdata($_SESSION["usuario"])["doc_verso"] == "1"){ ?>
+                      
+                      <div style="width: 210px;">
+                          <label class="input-file">
+                            <img src="img/icones/documento-verso.png" width="50px" alt="Foto do verso do documento">
+                            Verso
+                            <input type="file" class="form-control" id="" name="doc1">
+                          </label>
+                        </div>
+                      
+                      <?php }else{ ?>
+                      
+                      <div>
+                        <label class="input-file" style="background-color:#66bb6a;height: 123px;">
+                          <img src="img/icones/documento-verso.png" width="50px" alt="Foto da frente do documento">
+                          <span>APROVADO</span>
+                        </label>
+                      </div>
+                      
+                      <?php } ?>
+                      
+                      
+                      
+                      <?php if(vdata($_SESSION["usuario"])["doc_rosto"] == "") { ?> 
+                      
+                      <div>
+                        <label class="input-file" style="background-color:#d59d13;height: 123px;">
+                          <img src="img/icones/selfie.png" width="50px" alt="Selfie segurando o documento">
+                          <span>EM ANÁLISE</span>
+                        </label>
+                      </div>
+                      
+                      <?php }elseif(vdata($_SESSION["usuario"])["doc_rosto"] == "1"){ ?>
+                      
+                      <div style="width: 210px;">
+                          <label class="input-file">
+                            <img src="img/icones/selfie.png" width="50px" alt="Selfie segurando o documento">
+                            Selfie c/ documento
+                            <input type="file" class="form-control" id="" name="doc2">
+                          </label>
+                        </div>
+                      
+                      <?php }else{ ?>
+                      
+                       <div>
+                        <label class="input-file" style="background-color:#66bb6a;height: 123px;">
+                          <img src="img/icones/selfie.png" width="50px" alt="Foto da frente do documento">
+                          <span>APROVADO</span>
+                        </label>
+                      </div>
+                      
+                      <?php } ?>
+                      
+                      
+                      
+                      <?php if(vdata($_SESSION["usuario"])["doc_resi"] == "0") { ?>
+                      
+                      <div>
+                        <label class="input-file" style="background-color:#d59d13;height: 123px;">
+                          <img src="img/icones/comprovante.png" width="50px" alt="Comprovante de residência">
+                          <span>EM ANÁLISE</span>
+                        </label>
+                      </div>
+                      
+                      <?php }elseif(vdata($_SESSION["usuario"])["doc_resi"] == "1"){ ?>
+                      
+                      <div style="width: 210px;">
+                          <label class="input-file">
+                            <img src="img/icones/comprovante.png" width="50px" alt="Comprovante de residência">
+                            Comprovante de Residência
+                            <input type="file" class="form-control" id="" name="doc3">
+                          </label>
+                        </div>
+                      
+                      <?php }else{ ?>
+                      
+                      <div>
+                        <label class="input-file" style="background-color:#66bb6a;height: 123px;">
+                          <img src="img/icones/comprovante.png" width="50px" alt="Foto da frente do documento">
+                          <span>APROVADO</span>
+                        </label>
+                      </div>
+                      
+                      <?php } ?>
+                      <ol style="position: relative;left: -2%;margin-top: 13px;text-align: left;color: #f1f1f1;font-size: 11px;width: 87%;">
+                    <li>1-	Frente - Documento de Identificação original com Foto e Válido (Exemplos: Identidade, Passaporte ou Carteira de Motorista).</li>
+                    <li>2-	Fundo - Documento de Identificação original e Válido (Exemplos: Identidade, Passaporte ou Carteira de Motorista).</li>
+                    <li>3-	Selfie segurando o documento de identificação e uma folha escrita com a DATA DE HOJE, o nome e seu USUÁRIO. (Como exemplificado na imagem acima).</li>
+                    <li>4-	Comprovante de Residência com a data, em nome do titular da conta com emissão dos últimos 3 meses. * Caso o comprovante seja em nome dos pais/filhos/irmãos ou do cônjuge, enviar documento que comprove o vínculo, via Ticket.  (Exemplos: conta de água, conta de luz, conta de TV por assinatura, conta de internet, conta de telefone).</li>
+                    </ol>
+        
+                    </div>
+                    
+                     <br>
+                    
+                    <?php if(vdata($_SESSION["usuario"])["aprov"] == 2){ ?>
+                    
+                     
+                     
+                     
+                     
+                    <div class="col-auto" style="text-align: center; margin-top: 0 !important;">
+                        <button type="submit" class="btn-padrao btn btn-primary mb-3">Enviar</button>
+                      </div>
+                    <?php } ?>
+                    
+                    
+                  </form>
+                <?php } ?>
+        
+        
+                <?php if(vdata($_SESSION["usuario"])["aprov"] == 3){ ?>
+                <div class="sb_sec_title" style="background-color: #4caf50;">
+                        
+                        <span class="icon icon-sec"> </span>
+                        <span class="slt_sport_title"><strong>✅ Aprovação concluida.</strong></span>
+                        
+                    </div>
+                      <hr>
+                <?php } ?> 
+              </div>
+              
+             
+            </div>
+            </div>
+        </div>    
+    </main>
+
+    <script src="js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

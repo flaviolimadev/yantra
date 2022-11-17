@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+@import "abstract/unit";
+@import "abstract/variables";
+@import "abstract/breakpoint";
+@import "abstract/z-index";
+
+:root {
+  @each $name, $color in $webfatorial-colors {
+    --color-#{$name}: #{$color};
+  }
+
+  @each $name, $color in $dpw-colors {
+    --color-#{$name}: #{$color};
+  }
+
+  @each $name, $color in $social-media-colors {
+    --color-#{$name}: #{$color};
+  }
+}
+
+@import "vendor/normalize";
+
+@import "base/elements";
+@import "base/generics";
+
+@import "component/c-carousel";
