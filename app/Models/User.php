@@ -60,4 +60,10 @@ class User extends Authenticatable
         return $this->hasMany(Cods::class);
 
     }
+
+    public function affiliates(){
+
+        return $this->hasMany(Affiliate::class);
+
+    }
 }

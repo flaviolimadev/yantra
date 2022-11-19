@@ -3,7 +3,34 @@
 @section('titulo', 'Área do usuário')
 
 @section('conteudo')
+<style>
+
+  .form-control:disabled {
+      background-color: #4b158b !important;
+  }
+
+</style>
 <div class="conteudo-perfil">
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+    @if (isset($error_password))
+
+      <div class="alert alert-danger">
+          <ul>
+              <li>Senha atual inválida</li>
+          </ul>
+      </div>
+
+    @endif
+
     <div class="title senha" data-bs-toggle="collapse" href="#collapseSenha">
       <img src="{{ asset('CassinoYantra/Dashboard/img/icones/mudar_senha.png') }}" alt="Mudar Senha" width="30px">
       <span>Mudar senha</span>
@@ -11,40 +38,33 @@
     
     <div class="conteudo senha collapse" id="collapseSenha">
       <div class="card card-body">
-        <form action="#">
+        <form action="{{ route('recover') }}" method="post">
+
+          @csrf
+          
           <label for="senha-atual">Digite sua senha atual</label>
           <br>
-          <input type="text" class="mb-3" id="senha-atual">
+          <input type="text" class="mb-3" id="senha-atual" name="my_password">
 
           <br>
 
           <label for="senha-nova">Digite a nova senha</label>
           <br>
-          <input type="text" class="mb-3" id="senha-nova">
+          <input type="text" class="mb-3" id="senha-nova" name="new_password">
 
           <br>
 
           <label for="senha-nova2">Repetir senha</label>
           <br>
-          <input type="text" class="mb-3" id="senha-nova2">
+          <input type="text" class="mb-3" id="senha-nova2" name="confirm_password">
 
           <p>Por questões de segurança, se você troca sua senha, você ficará impossibilitado de realizar saques nas próximas 48 horas.</p>
 
-          <a href="#" class="btn-confirmar">Mudar senha</a>
+          <button class="btn-confirmar" type="submit">Mudar senha</button>
         </form>
       </div>
     </div>
 
-    <div class="title google" data-bs-toggle="collapse" href="#collapseGoogle">
-      <img src="{{ asset('CassinoYantra/Dashboard/img/icones/google_authenticator.png') }}" alt="Google Authenticator" width="30px">
-      <span>Google Authenticator</span>
-    </div>
-    
-    <div class="conteudo collapse" id="collapseGoogle">
-      <div class="card card-body">
-        <h4>Disponível em breve . . .</h4>
-      </div>
-    </div>
 
     <div class="title info" data-bs-toggle="collapse" href="#collapseDados">
       <img src="{{ asset('CassinoYantra/Dashboard/img/icones/informacoes_gerais.png') }}" alt="Informações Gerais" width="30px">
@@ -57,43 +77,21 @@
         <form action="#" class="form-dados">
           
           <label for="nome"> Nome Completo</label>
-          <input id="nome" class="form-control" type="text" placeholder="Nome Completo: " aria-label="Disabled input example" disabled="">  
+          <input id="nome" class="form-control" type="text" placeholder="Nome Completo: " value="{{ $AuthUser->name }}" aria-label="Disabled input example" disabled="">  
           
           <label for="user"> Usuário</label>
-          <input id="user" class="form-control" type="text" placeholder="Usuáro: " aria-label="Disabled input example" disabled="">
+          <input id="user" class="form-control" type="text" placeholder="Usuáro: " value="{{ $AuthUser->user }}" aria-label="Disabled input example" disabled="">
           
           <label for="data-nas"> Data de Nascimento</label>
-          <input id="data-nas" class="form-control" type="text" placeholder="Data de nascimento: " aria-label="Disabled input example" disabled="">
+          <input id="data-nas" class="form-control" type="text" placeholder="Data de nascimento: " value="{{ $AuthUser->birth_date }}" aria-label="Disabled input example" disabled="">
           
-          <label for="doc-f"> Documento Fiscal</label>
-          <input id="doc-f" class="form-control" type="text" placeholder="Número de documento fiscal: " aria-label="Disabled input example" disabled="">
-          
-          <label for="phone"> Telefone</label>
-          <input id="phone" class="form-control" type="tel" placeholder="Telefone: " aria-label="Disabled input example" disabled="">
+          <label for="phone"> Whatsapp</label>
+          <input id="phone" class="form-control" type="tel" placeholder="Telefone: " value="{{ $AuthUser->telephone }}" aria-label="Disabled input example" disabled="">
           
           <label for="email"> E-mail</label>
-          <input id="email" class="form-control" type="email" placeholder="E-mail: " aria-label="Disabled input example" disabled="">
+          <input id="email" class="form-control" type="email" placeholder="E-mail: " value="{{ $AuthUser->email }}" aria-label="Disabled input example" disabled="">
 
           <br>
-          
-          <label for="endereco"> Endereço</label>
-          <input id="endereco" class="form-control" type="text" name="endereco" placeholder="Endereço: " aria-label="default input example" value="">
-          
-          <label for="bairro"> Bairro</label>
-          <input id="bairro" class="form-control" type="text" name="bairro" placeholder="Bairro: " aria-label="default input example" value="">
-          
-          <label for="cidade"> Cidade</label>
-          <input id="cidade" class="form-control" type="text" name="cidade" placeholder="Cidade: " aria-label="default input example" value="">
-          
-          <label for="uf"> UF</label>
-          <input id="uf" class="form-control" type="text" name="uf" placeholder="UF: " aria-label="default input example" value="">
-          
-          <label for="cep"> CEP</label>
-          <input id="cep" class="form-control" type="text" name="cep" placeholder="CEP: " aria-label="default input example" value="">
-
-        <div class="col-auto"  style="text-align: center;">
-          <button type="submit" class="btn-padrao btn btn-primary mb-3">Salvar</button>
-        </div>
         </form>
       </div>
     </div>

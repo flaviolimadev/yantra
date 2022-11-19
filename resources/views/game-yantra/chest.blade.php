@@ -36,13 +36,7 @@
                 <a class="btn-menu" data-bs-toggle="collapse" href="#collapseMenuDesk" role="button" aria-expanded="false" aria-controls="collapseMenuDesk">
                     <img src="{{ asset('CassinoYantra/game/token/img/menu.png') }}" alt="Menu" width="50px">
     
-                    <div class="collapse" id="collapseMenuDesk">
-                        <div class="card card-body">
-                          <li><a href="{{ route('yantra') }}" class="item">Meus Baús</a></li>
-                          <li><a href="#" class="item">Indicação</a></li>
-                          <li><a href="#" class="item">Plano de carreira</a></li>
-                        </div>
-                    </div>
+                    @include('_sections/menu_game')
                 </a>
             </div>
         </div>
@@ -122,25 +116,49 @@
             <div class="numero pedras">
                 <p class="title-colunas">número</p>
                 <ul class="pedras" style="top: 12px;">
-
+                    
                     <li class="item-pedra-n 5">
                         <img src=" {{ asset('CassinoYantra/game/game/img/p-nleft.png') }}" height="40px">
-                        <span class="numero-visto" style="font-size: 14px;">{{ $nums['num_01'] }}</span>
+
+                        @if($nums['num_01']['status'] == 1)
+                        <s><span class="numero-visto" style="font-size: 14px;">{{ $nums['num_01']['num'] }}</span></s>
+                        @else
+                        <span class="numero-visto" style="font-size: 14px;">{{ $nums['num_01']['num'] }}</span>
+                        @endif
+
                     </li>
 
                     <li class="item-pedra-n 6">
                         <img src=" {{ asset('CassinoYantra/game/game/img/p-nleft.png') }}" height="40px">
-                        <span class="numero-visto" style="font-size: 14px;">{{ $nums['num_02'] }}</span>
+                        
+                        @if($nums['num_02']['status'] == 1)
+                        <s><span class="numero-visto" style="font-size: 14px;">{{ $nums['num_02']['num'] }}</span></s>
+                        @else
+                        <span class="numero-visto" style="font-size: 14px;">{{ $nums['num_02']['num'] }}</span>
+                        @endif
+                        
                     </li>
 
                     <li class="item-pedra-n 7">
                         <img src=" {{ asset('CassinoYantra/game/game/img/p-nleft.png') }}" height="40px">
-                        <span class="numero-visto" style="font-size: 14px;">{{ $nums['num_03'] }}</span>
+                        
+                        @if($nums['num_03']['status'] == 1)
+                        <s><span class="numero-visto" style="font-size: 14px;">{{ $nums['num_03']['num'] }}</span></s>
+                        @else
+                        <span class="numero-visto" style="font-size: 14px;">{{ $nums['num_03']['num'] }}</span>
+                        @endif
+                        
                     </li>
 
                     <li class="item-pedra-n 8">
                         <img src=" {{ asset('CassinoYantra/game/game/img/p-nleft.png') }}" height="40px">
-                        <span class="numero-visto" style="font-size: 14px;">{{ $nums['num_04'] }}</span>
+                        
+                        @if($nums['num_04']['status'] == 1)
+                        <s><span class="numero-visto" style="font-size: 14px;">{{ $nums['num_04']['num'] }}</span></s>
+                        @else
+                        <span class="numero-visto" style="font-size: 14px;">{{ $nums['num_04']['num'] }}</span>
+                        @endif
+                        
                     </li>
                 </ul>
             </div>
@@ -152,22 +170,22 @@
     
                     <li class="item-pedra 5">
                         <img src=" {{ asset('CassinoYantra/game/game/img/p-branca.png') }}" width="40px">
-                        <img class="cor-pedra" src=" {{ asset('CassinoYantra/game/game/img/p-verde.png') }}" width="40px">
+                        <img class="cor-pedra" src=" {{ asset('CassinoYantra/game/game/img/p-verde.png') }}" width="40px" style="display:{{ $nums['num_01']['num'] == 'Vendido' ? 'block' : 'none'}}">
                     </li>
     
                     <li class="item-pedra 6">
                         <img src=" {{ asset('CassinoYantra/game/game/img/p-branca.png') }}" width="40px">
-                        <img class="cor-pedra" src=" {{ asset('CassinoYantra/game/game/img/p-verde.png') }}" width="40px">
+                        <img class="cor-pedra" src=" {{ asset('CassinoYantra/game/game/img/p-verde.png') }}" width="40px" style="display:{{ $nums['num_02']['num'] == 'Vendido' ? 'block' : 'none'}}">
                     </li>
     
                     <li class="item-pedra 7">
                         <img src=" {{ asset('CassinoYantra/game/game/img/p-branca.png') }}" width="40px">
-                        <img class="cor-pedra" src=" {{ asset('CassinoYantra/game/game/img/p-verde.png') }}" width="40px">
+                        <img class="cor-pedra" src=" {{ asset('CassinoYantra/game/game/img/p-verde.png') }}" width="40px" style="display:{{ $nums['num_03']['num'] == 'Vendido' ? 'block' : 'none'}}">
                     </li>
     
                     <li class="item-pedra 8">
                         <img src=" {{ asset('CassinoYantra/game/game/img/p-branca.png') }}" width="40px">
-                        <img class="cor-pedra" src=" {{ asset('CassinoYantra/game/game/img/p-verde.png') }}" width="40px">
+                        <img class="cor-pedra" src=" {{ asset('CassinoYantra/game/game/img/p-verde.png') }}" width="40px" style="display:{{ $nums['num_04']['num'] == 'Vendido' ? 'block' : 'none'}}">
                     </li>
                 </ul>
             </div>
@@ -179,22 +197,22 @@
     
                     <li class="item-pedra 5">
                         <img src=" {{ asset('CassinoYantra/game/game/img/p-branca.png') }}" width="40px">
-                        <img class="cor-pedra" src=" {{ asset('CassinoYantra/game/game/img/p-laranja.png') }}" width="40px" style="display:{{ $nums['num_01'] != '****' ? 'block' : 'none'}}">
+                        <img class="cor-pedra" src=" {{ asset('CassinoYantra/game/game/img/p-laranja.png') }}" width="40px" style="display:{{ $nums['num_01']['num'] != '****' &&  $nums['num_01']['num'] != 'Vendido' ? 'block' : 'none'}}">
                     </li>
     
                     <li class="item-pedra 6">
                         <img src=" {{ asset('CassinoYantra/game/game/img/p-branca.png') }}" width="40px">
-                        <img class="cor-pedra" src=" {{ asset('CassinoYantra/game/game/img/p-laranja.png') }}" width="40px" style="display:{{ $nums['num_02'] != '****' ? 'block' : 'none'}}">
+                        <img class="cor-pedra" src=" {{ asset('CassinoYantra/game/game/img/p-laranja.png') }}" width="40px" style="display:{{ $nums['num_02']['num'] != '****' &&  $nums['num_02']['num'] != 'Vendido' ? 'block' : 'none'}}">
                     </li>
     
                     <li class="item-pedra 7">
                         <img src=" {{ asset('CassinoYantra/game/game/img/p-branca.png') }}" width="40px">
-                        <img class="cor-pedra" src=" {{ asset('CassinoYantra/game/game/img/p-laranja.png') }}" width="40px" style="display:{{ $nums['num_03'] != '****' ? 'block' : 'none'}}">
+                        <img class="cor-pedra" src=" {{ asset('CassinoYantra/game/game/img/p-laranja.png') }}" width="40px" style="display:{{ $nums['num_03']['num'] != '****' &&  $nums['num_03']['num'] != 'Vendido' ? 'block' : 'none'}}">
                     </li>
     
                     <li class="item-pedra 8">
                         <img src=" {{ asset('CassinoYantra/game/game/img/p-branca.png') }}" width="40px">
-                        <img class="cor-pedra" src=" {{ asset('CassinoYantra/game/game/img/p-laranja.png') }}" width="40px" style="display:{{ $nums['num_04'] != '****' ? 'block' : 'none'}}">
+                        <img class="cor-pedra" src=" {{ asset('CassinoYantra/game/game/img/p-laranja.png') }}" width="40px" style="display:{{ $nums['num_04']['num'] != '****' &&  $nums['num_04']['num'] != 'Vendido' ? 'block' : 'none'}}">
                     </li>
                 </ul>
             </div>
@@ -210,7 +228,7 @@
 
                     <div class="toggle-wrapper 5">
                         <label class="switch">
-                          <input type="checkbox" class="hidden-toggle" {{ $status_venda['num_01'] }} onclick="atv_nums({{ $Chests->id }},1)" {{ $nums['num_01'] != '****' ? 'disabled' : ''}}/>
+                          <input type="checkbox" class="hidden-toggle" {{ $status_venda['num_01'] }} onclick="atv_nums({{ $Chests->id }},1)" {{ $nums['num_01']['num'] != '****' ? 'disabled' : ''}}/>
                           <div class="slider">
                             <div class="button"></div>
                           </div>
@@ -219,7 +237,7 @@
     
                     <div class="toggle-wrapper 6">
                         <label class="switch">
-                          <input type="checkbox" class="hidden-toggle" {{ $status_venda['num_02'] }} onclick="atv_nums({{ $Chests->id }},2)" {{ $nums['num_02'] != '****' ? 'disabled' : ''}}/>
+                          <input type="checkbox" class="hidden-toggle" {{ $status_venda['num_02'] }} onclick="atv_nums({{ $Chests->id }},2)" {{ $nums['num_02']['num'] != '****' ? 'disabled' : ''}}/>
                           <div class="slider">
                             <div class="button"></div>
                           </div>
@@ -228,7 +246,7 @@
 
                     <div class="toggle-wrapper 7">
                         <label class="switch">
-                          <input type="checkbox" class="hidden-toggle" {{ $status_venda['num_03'] }} onclick="atv_nums({{ $Chests->id }},3)" {{ $nums['num_03'] != '****' ? 'disabled' : ''}}/>
+                          <input type="checkbox" class="hidden-toggle" {{ $status_venda['num_03'] }} onclick="atv_nums({{ $Chests->id }},3)" {{ $nums['num_03']['num'] != '****' ? 'disabled' : ''}}/>
                           <div class="slider">
                             <div class="button"></div>
                           </div>
@@ -237,7 +255,7 @@
     
                     <div class="toggle-wrapper 8">
                         <label class="switch">
-                          <input type="checkbox" class="hidden-toggle" {{ $status_venda['num_04'] }} onclick="atv_nums({{ $Chests->id }},4)" {{ $nums['num_04'] != '****' ? 'disabled' : ''}}/>
+                          <input type="checkbox" class="hidden-toggle" {{ $status_venda['num_04'] }} onclick="atv_nums({{ $Chests->id }},4)" {{ $nums['num_04']['num'] != '****' ? 'disabled' : ''}}/>
                           <div class="slider">
                             <div class="button"></div>
                           </div>
@@ -257,6 +275,26 @@
                         <img src=" {{ asset('CassinoYantra/game/game/img/seta-roleta.png') }}" alt="Ir para roletas" width="25px">
                     </a>
                 </div>
+            </div>
+        </div>
+
+        <div class="indicacoes">
+            <img class="tag-indicacoes" src="{{ asset('CassinoYantra/game/game/img/seta.png') }}" width="180px">
+
+            <span class="title-indicacoes">
+                Indique amigos
+                <br>
+                E ganhe bônificações
+            </span>
+            
+            <br>
+
+            <span class="subtitle-indicacoes">copie o seu link e envie para os amigos</span>
+
+            <div>
+                <input type="text" value="{{ route('registerAffiliate', ['user' => $AuthUser->user]) }}" disabled id="Link">
+
+                <button onclick="copiarLink()">copiar</button>
             </div>
         </div>
 
@@ -281,6 +319,17 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript">
+
+        function copiarLink() {
+          var copyText = document.getElementById("Link");
+          copyText.select();
+        
+          copyText.setSelectionRange(0, 99999);
+        
+          navigator.clipboard.writeText(copyText.value);
+        
+          //alert("Link copiado: " + copyText.value);
+        }
 
         function atv_nums(id, num){
 

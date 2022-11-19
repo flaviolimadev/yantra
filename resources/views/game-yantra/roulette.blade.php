@@ -52,13 +52,7 @@
                 <a class="btn-menu" data-bs-toggle="collapse" href="#collapseMenuDesk" role="button" aria-expanded="false" aria-controls="collapseMenuDesk">
                     <img src="{{ asset('CassinoYantra/game/token/img/menu.png') }}" alt="Menu" width="50px">
     
-                    <div class="collapse" id="collapseMenuDesk">
-                        <div class="card card-body">
-                          <li><a href="{{ route('yantra') }}" class="item">Meus Baús</a></li>
-                          <li><a href="#" class="item">Indicação</a></li>
-                          <li><a href="#" class="item">Plano de carreira</a></li>
-                        </div>
-                    </div>
+                    @include('_sections/menu_game')
                 </a>
             </div>
         </div>
@@ -108,21 +102,45 @@
     <div class="menu-roletas">
         <div class="left">
             <ul>
-                <li style="cursor: pointer;" onclick="select_numero(1, '{{ $nums['num_01'] }}')">
+                <li style="cursor: pointer;" onclick="select_numero(1, '{{ $nums['num_01']['num'] }}')">
                     <img src="{{ asset('CassinoYantra/game/roletas/img/p-nleft.png') }}" height="70px" id="num_01" class="">
-                    <span>{{ $nums['num_01'] }}</span>
+
+                    @if($nums['num_01']['status'] == 1)
+                    <s><span>{{ $nums['num_01']['num'] }}</span></s>
+                    @else
+                    <span>{{ $nums['num_01']['num'] }}</span>
+                    @endif
+
                 </li>
-                <li style="cursor: pointer;" onclick="select_numero(2, '{{ $nums['num_02'] }}')">
+                <li style="cursor: pointer;" onclick="select_numero(2, '{{ $nums['num_02']['num'] }}')">
                     <img src="{{ asset('CassinoYantra/game/roletas/img/p-nleft.png') }}" height="70px" id="num_02" class="">
-                    <span>{{ $nums['num_02'] }}</span>
+                    
+                    @if($nums['num_02']['status'] == 1)
+                    <s><span>{{ $nums['num_02']['num'] }}</span></s>
+                    @else
+                    <span>{{ $nums['num_02']['num'] }}</span>
+                    @endif
+
                 </li>
-                <li style="cursor: pointer;" onclick="select_numero(3, '{{ $nums['num_03'] }}')">
+                <li style="cursor: pointer;" onclick="select_numero(3, '{{ $nums['num_03']['num'] }}')">
                     <img src="{{ asset('CassinoYantra/game/roletas/img/p-nleft.png') }}" height="70px" id="num_03" class="">
-                    <span>{{ $nums['num_03'] }}</span>
+                    
+                    @if($nums['num_03']['status'] == 1)
+                    <s><span>{{ $nums['num_03']['num'] }}</span></s>
+                    @else
+                    <span>{{ $nums['num_03']['num'] }}</span>
+                    @endif
+
                 </li>
-                <li style="cursor: pointer;" onclick="select_numero(4, '{{ $nums['num_04'] }}')">
+                <li style="cursor: pointer;" onclick="select_numero(4, '{{ $nums['num_04']['num'] }}')">
                     <img src="{{ asset('CassinoYantra/game/roletas/img/p-nleft.png') }}" height="70px" id="num_04" class="">
-                    <span>{{ $nums['num_04'] }}</span>
+                    
+                    @if($nums['num_04']['status'] == 1)
+                    <s><span>{{ $nums['num_04']['num'] }}</span></s>
+                    @else
+                    <span>{{ $nums['num_04']['num'] }}</span>
+                    @endif
+
                 </li>
             </ul>
         </div>

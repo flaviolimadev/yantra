@@ -78,6 +78,8 @@
                     <span>Registro</span>
                 </div>
 
+                <input type="text" id="nome-completo" name="sponsor" value="{{ old('sponsor') ? old('sponsor') : $sponsor  }}" style="display:none">
+
                 <div class="input-cadastro">
                     <label for="nome-completo">
                         <span>Nome Completo</span>
@@ -185,7 +187,7 @@
 
                     <div class="cadastro-wpp">
                         <span class="title-numero">Whatsapp</span>
-                        <input type="text" name="phone" value="{{ old('phone') }}">
+                        <input type="text" name="telephone" value="{{ old('telephone') }}">
                     </div>
                 </div>
 

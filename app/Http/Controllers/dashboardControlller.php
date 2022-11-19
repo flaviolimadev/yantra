@@ -6,6 +6,8 @@ use App\Models\Chest;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 
 class dashboardControlller extends Controller
 {
@@ -91,5 +93,36 @@ class dashboardControlller extends Controller
         
         return view('dashboard.faq', ['AuthUser' => $AuthUser, 'error_login' => $error_login]);
 
+    }
+
+    public function recover(Request $r){
+
+        $AuthUser = Auth::User(); 
+
+        $r->only('my_password', 'new_password', 'confirm_password');
+
+        $validacao = $r->validate([
+            'my_password' => 'required|min:8',
+            'new_password' => 'required|min:8',
+            'confirm_password' => 'required|same:new_password|min:8'
+        ]);
+
+        $my_password = Hash::make($r->my_password);
+        $new_password = Hash::make($r->new_password);
+
+        if($my_password != $AuthUser->password){
+
+            return redirect()->route('home', ['error_password' => 1])->withInput();
+
+        }else{
+
+            $recover_pass = User::find($AuthUser->id);
+            $recover_pass->password = $new_password;
+            $recover_pass->save();
+
+        }
+
+        return redirect()->route('home');
+        
     }
 }

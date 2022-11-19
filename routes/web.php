@@ -23,17 +23,22 @@ Route::middleware(['auth'])->group(function() {
     Route::get('/board/bets', [dashboardControlller::class, 'bets'])->name('bets');
     Route::get('/board/notifications', [dashboardControlller::class, 'notifications'])->name('notifications');
     Route::get('/board/faq', [dashboardControlller::class, 'faq'])->name('faq');
+    Route::post('/board/recover', [dashboardControlller::class, 'recover'])->name('recover');
+
 
     Route::get('/casino/yantra', [yantraController::class, 'yantra'])->name('yantra');
     Route::get('/casino/yantra/chest/{id}', [yantraController::class, 'chest'])->name('yantra.chest');
     Route::get('/casino/yantra/roulette/{id}', [yantraController::class, 'roulette'])->name('yantra.roulette');
     Route::get('/casino/yantra/award/{id}/{premio}', [yantraController::class, 'award'])->name('yantra.award');
+    Route::get('/casino/yantra/recommendation', [yantraController::class, 'recommendation'])->name('yantra.recommendation');
+    Route::get('/casino/yantra/revshare', [yantraController::class, 'revshare'])->name('yantra.revshare');
+    Route::get('/casino/yantra/career', [yantraController::class, 'career'])->name('yantra.career');
 
     Route::get('/casino/yantra/add', [yantraController::class, 'add_chests'])->name('yantra.awardAdd');
 
 
 
-    Route::get('/casino/yantra/buy/{id}', [yantraController::class, 'buy'])->name('yantra.buy');
+    Route::get('/casino/yantra/buy/', [yantraController::class, 'buy'])->name('yantra.buy');
     Route::post('/casino/yantra/buy-or-sell/', [yantraController::class, 'buyOrSell'])->name('yantra.buyOrSell');
     Route::get('/casino/yantra/scrape/', [yantraController::class, 'scrape'])->name('yantra.scrape');
     Route::post('/casino/yantra/check-code/', [yantraController::class, 'checkCode'])->name('yantra.checkCode');
@@ -68,6 +73,7 @@ Route::get('/casino/sms/{phone}', [casinoController::class, 'phone']);
 | Logout da aplicação;
 */
 Route::get('/auth/register', [authController::class, 'index'])->name('register');
+Route::get('/auth/register/{user}', [authController::class, 'affiliate'])->name('registerAffiliate');
 Route::get('/auth/login', [authController::class, 'view'])->name('login');
 Route::get('/auth/logout', [authController::class, 'logout'])->name('logout');
 Route::post('/auth/login', [authController::class, 'login'])->name('login');

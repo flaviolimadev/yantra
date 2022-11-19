@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Affiliate;
 use App\Models\Chest;
 use App\Models\Chests_sys;
 use App\Models\Cods;
@@ -33,7 +34,7 @@ class yantraController extends Controller
         ]);
 
     }
-
+ 
 
     //========================================================================================
     public function chest($id){
@@ -47,11 +48,53 @@ class yantraController extends Controller
             'num_04' => $Chests->atv_num_04 == 1 ? 'checked' : ''
         ];
 
+        $num_01_usado = Cods::where('code', $Chests->num_01)->get();
+        $num_02_usado = Cods::where('code', $Chests->num_02)->get();
+        $num_03_usado = Cods::where('code', $Chests->num_03)->get();
+        $num_04_usado = Cods::where('code', $Chests->num_04)->get();
+
+        $num_01_usado = sizeof($num_01_usado) > 0 ? $num_01_usado[0]['status']: 0;
+        $num_02_usado = sizeof($num_02_usado) > 0 ? $num_02_usado[0]['status']: 0;
+        $num_03_usado = sizeof($num_03_usado) > 0 ? $num_03_usado[0]['status']: 0;
+        $num_04_usado = sizeof($num_04_usado) > 0 ? $num_04_usado[0]['status']: 0;
+
+        if($Chests->num_01 == 0){
+            $num_01 = '****';
+        }elseif($Chests->num_01 == 999) {
+            $num_01 = 'Vendido';
+        }else{
+            $num_01 = $Chests->num_01;
+        }
+
+        if($Chests->num_02 == 0){
+            $num_02 = '****';
+        }elseif($Chests->num_02 == 999) {
+            $num_02 = 'Vendido';
+        }else{
+            $num_02 = $Chests->num_02;
+        }
+
+        if($Chests->num_03 == 0){
+            $num_03 = '****';
+        }elseif($Chests->num_03 == 999) {
+            $num_03 = 'Vendido';
+        }else{
+            $num_03 = $Chests->num_03;
+        }
+
+        if($Chests->num_04 == 0){
+            $num_04 = '****';
+        }elseif($Chests->num_04 == 999) {
+            $num_04 = 'Vendido';
+        }else{
+            $num_04 = $Chests->num_04;
+        }
+
         $nums = [
-            'num_01' => $Chests->num_01 == 0 ? '****' : $Chests->num_01,
-            'num_02' => $Chests->num_02 == 0 ? '****' : $Chests->num_02,
-            'num_03' => $Chests->num_03 == 0 ? '****' : $Chests->num_03,
-            'num_04' => $Chests->num_04 == 0 ? '****' : $Chests->num_04
+            'num_01' => ['num' => $num_01, 'status' => $num_01_usado],
+            'num_02' => ['num' => $num_02, 'status' => $num_02_usado],
+            'num_03' => ['num' => $num_03, 'status' => $num_03_usado],
+            'num_04' => ['num' => $num_04, 'status' => $num_04_usado]
         ];
 
 
@@ -67,20 +110,60 @@ class yantraController extends Controller
     }
 
 
-    //========================================================================================
+    //========================================================================================'*************'
     public function roulette($id){
 
         $AuthUser = Auth::User();
         $Chests = Chest::find($id);
 
+        $num_01_usado = Cods::where('code', $Chests->num_01)->get();
+        $num_02_usado = Cods::where('code', $Chests->num_02)->get();
+        $num_03_usado = Cods::where('code', $Chests->num_03)->get();
+        $num_04_usado = Cods::where('code', $Chests->num_04)->get();
+
+        $num_01_usado = sizeof($num_01_usado) > 0 ? $num_01_usado[0]['status']: 0;
+        $num_02_usado = sizeof($num_02_usado) > 0 ? $num_02_usado[0]['status']: 0;
+        $num_03_usado = sizeof($num_03_usado) > 0 ? $num_03_usado[0]['status']: 0;
+        $num_04_usado = sizeof($num_04_usado) > 0 ? $num_04_usado[0]['status']: 0;
+
+        if($Chests->num_01 == 0){
+            $num_01 = '****';
+        }elseif($Chests->num_01 == 999) {
+            $num_01 = 'Vendido';
+        }else{
+            $num_01 = $Chests->num_01;
+        }
+
+        if($Chests->num_02 == 0){
+            $num_02 = '****';
+        }elseif($Chests->num_02 == 999) {
+            $num_02 = 'Vendido';
+        }else{
+            $num_02 = $Chests->num_02;
+        }
+
+        if($Chests->num_03 == 0){
+            $num_03 = '****';
+        }elseif($Chests->num_03 == 999) {
+            $num_03 = 'Vendido';
+        }else{
+            $num_03 = $Chests->num_03;
+        }
+
+        if($Chests->num_04 == 0){
+            $num_04 = '****';
+        }elseif($Chests->num_04 == 999) {
+            $num_04 = 'Vendido';
+        }else{
+            $num_04 = $Chests->num_04;
+        }
+
         $nums = [
-            'num_01' => $Chests->num_01 == 0 ? '*************' : $Chests->num_01,
-            'num_02' => $Chests->num_02 == 0 ? '*************' : $Chests->num_02,
-            'num_03' => $Chests->num_03 == 0 ? '*************' : $Chests->num_03,
-            'num_04' => $Chests->num_04 == 0 ? '*************' : $Chests->num_04
+            'num_01' => ['num' => $num_01, 'status' => $num_01_usado],
+            'num_02' => ['num' => $num_02, 'status' => $num_02_usado],
+            'num_03' => ['num' => $num_03, 'status' => $num_03_usado],
+            'num_04' => ['num' => $num_04, 'status' => $num_04_usado]
         ];
-
-
 
 
         return view('game-yantra.roulette', [
@@ -109,7 +192,9 @@ class yantraController extends Controller
     }
 
     //========================================================================================
-    public function buy($id){
+    public function buy(Request $r){
+
+        $id = $r->id;
 
         $AuthUser = Auth::User();
 
@@ -121,7 +206,227 @@ class yantraController extends Controller
 
         if($Chests->status){
 
-            if($AuthUser->balance >= $Chests->precing){
+            if($AuthUser->balance >= $Chests->precing && $AuthUser->id != 10){
+
+                //Pegando o seu patrocinador
+                $patrocinador = Affiliate::where('affiliate_id', $AuthUser->id)->get();
+
+                //Adicionando bonus de indicação direta;
+                $vez = User::find($patrocinador[0]['user_id']);
+                $vez->bonus += $Chests->direct;
+                $vez->save();
+
+                //Adicionando bonus de Rede;
+                $vez = User::find($patrocinador[0]['user_id']);
+                $vez->bonus += $Chests->network;
+                $vez->save();
+
+                //Crianto o extrato financeiro no sistema;
+                $new_extract = new Extract;
+                $new_extract->user_id = $patrocinador[0]['user_id'];
+                $new_extract->status = 1;
+                $new_extract->about = 'Comição direta de Báu - '.$AuthUser->user;
+                $new_extract->value =  $Chests->direct;
+                $new_extract->ref =  $AuthUser->id;;
+                $new_extract->save();
+
+                //Crianto o extrato financeiro no sistema;
+                $new_extract = new Extract;
+                $new_extract->user_id = $patrocinador[0]['user_id'];
+                $new_extract->status = 1;
+                $new_extract->about = 'Comição indireta de Báu - '.$AuthUser->user;
+                $new_extract->value =  $Chests->network;
+                $new_extract->ref =  $AuthUser->id;
+                $new_extract->save();
+
+                //Pecorrendo os 10 Niveis da Rede
+                for($i = 0; $i <= 9; $i++){
+
+                    if($patrocinador[0]['user_id'] == 10){break;}
+
+                    //echo "Nível ({$i}) :" . $patrocinador[0]['user_id'].'<br>';
+                    $patrocinador = Affiliate::where('affiliate_id', $patrocinador[0]['user_id'])->get();
+
+                    if(sizeof($patrocinador) > 0){ 
+                        
+                        //Adicionando bonus de Rede;
+                        $vez = User::find($patrocinador[0]['user_id']);
+                        $vez->bonus += $Chests->network;
+                        $vez->save();
+
+                        //Crianto o extrato financeiro no sistema;
+                        $new_extract = new Extract;
+                        $new_extract->user_id = $patrocinador[0]['user_id'];
+                        $new_extract->status = 1;
+                        $new_extract->about = 'Comição indireta de Báu - '.$AuthUser->user;
+                        $new_extract->value =  $Chests->network;
+                        $new_extract->ref =  $AuthUser->id;;
+                        $new_extract->save();
+
+                    }else{break;}
+                    
+                }
+
+
+
+                $buscar_doador = true;
+                //Procurando doador para receber o valor;
+                //Pegando o patrocinador;
+                $patrocinador = Affiliate::where('affiliate_id', $AuthUser->id)->get();
+
+                while($buscar_doador){
+
+                    if($patrocinador[0]['user_id'] == 10){ 
+
+                        //Atualizando Saldo de quem ta recebendo a doação
+                        $atualizar_saldo_patrocinador = User::find(10);
+                        $atualizar_saldo_patrocinador->balance += ($Chests->return / 4);
+                        $atualizar_saldo_patrocinador->save();
+
+                        //Crianto o extrato financeiro no sistema;
+                        $new_extract = new Extract;
+                        $new_extract->user_id = 10;
+                        $new_extract->status = 1;
+                        $new_extract->about = 'Venda de Código - '.$AuthUser->user;
+                        $new_extract->value =  ($Chests->return / 4);
+                        $new_extract->ref =  $AuthUser->id;
+                        $new_extract->save();
+
+
+                        break; 
+                    }
+
+                    if(sizeof($patrocinador) > 0){ 
+
+                        $check_doador = Chest::where('user_id', $patrocinador[0]['user_id'])->where('status', 1)->get();
+
+                        if(sizeof($check_doador) > 0){
+
+                            foreach($check_doador as $baus){
+
+
+                                if($baus->num_01 == 0 && $baus->atv_num_01 == 1){
+
+                                    //Atualizando Bau de quem ta recebendo a doação
+                                    $atualizar_bau = chest::find($baus->id);
+                                    $atualizar_bau->num_01 = 999;
+                                    $atualizar_bau->atv_num_01 = 0;
+                                    $atualizar_bau->save();
+
+                                    //Atualizando Saldo de quem ta recebendo a doação
+                                    $atualizar_saldo_patrocinador = User::find($patrocinador[0]['user_id']);
+                                    $atualizar_saldo_patrocinador->balance += ($Chests->return / 4);
+                                    $atualizar_saldo_patrocinador->save();
+
+                                    //Crianto o extrato financeiro no sistema;
+                                    $new_extract = new Extract;
+                                    $new_extract->user_id = $patrocinador[0]['user_id'];
+                                    $new_extract->status = 1;
+                                    $new_extract->about = 'Venda de Código - '.$AuthUser->user;
+                                    $new_extract->value =  ($Chests->return / 4);
+                                    $new_extract->ref =  $AuthUser->id;
+                                    $new_extract->save();
+
+                                    $buscar_doador = false;
+                                    break;
+                                }
+
+
+                                if($baus->num_02 == 0 && $baus->atv_num_02 == 1){
+
+                                    //Atualizando Bau de quem ta recebendo a doação
+                                    $atualizar_bau = chest::find($baus->id);
+                                    $atualizar_bau->num_01 = 999;
+                                    $atualizar_bau->atv_num_01 = 0;
+                                    $atualizar_bau->save();
+
+                                    //Atualizando Saldo de quem ta recebendo a doação
+                                    $atualizar_saldo_patrocinador = User::find($patrocinador[0]['user_id']);
+                                    $atualizar_saldo_patrocinador->balance += ($Chests->return / 4);
+                                    $atualizar_saldo_patrocinador->save();
+
+                                    //Crianto o extrato financeiro no sistema;
+                                    $new_extract = new Extract;
+                                    $new_extract->user_id = $patrocinador[0]['user_id'];
+                                    $new_extract->status = 1;
+                                    $new_extract->about = 'Venda de Código - '.$AuthUser->user;
+                                    $new_extract->value =  ($Chests->return / 4);
+                                    $new_extract->ref =  $AuthUser->id;
+                                    $new_extract->save();
+
+                                    $buscar_doador = false;
+                                    break;
+                                }
+
+
+                                if($baus->num_03 == 0 && $baus->atv_num_03 == 1){
+
+                                    //Atualizando Bau de quem ta recebendo a doação
+                                    $atualizar_bau = chest::find($baus->id);
+                                    $atualizar_bau->num_01 = 999;
+                                    $atualizar_bau->atv_num_01 = 0;
+                                    $atualizar_bau->save();
+
+                                    //Atualizando Saldo de quem ta recebendo a doação
+                                    $atualizar_saldo_patrocinador = User::find($patrocinador[0]['user_id']);
+                                    $atualizar_saldo_patrocinador->balance += ($Chests->return / 4);
+                                    $atualizar_saldo_patrocinador->save();
+
+                                    //Crianto o extrato financeiro no sistema;
+                                    $new_extract = new Extract;
+                                    $new_extract->user_id = $patrocinador[0]['user_id'];
+                                    $new_extract->status = 1;
+                                    $new_extract->about = 'Venda de Código - '.$AuthUser->user;
+                                    $new_extract->value =  ($Chests->return / 4);
+                                    $new_extract->ref =  $AuthUser->id;
+                                    $new_extract->save();
+
+                                    $buscar_doador = false;
+                                    break;
+                                }
+
+
+                                if($baus->num_04 == 0 && $baus->atv_num_04 == 1){
+
+                                    //Atualizando Bau de quem ta recebendo a doação
+                                    $atualizar_bau = chest::find($baus->id);
+                                    $atualizar_bau->num_01 = 999;
+                                    $atualizar_bau->atv_num_01 = 0;
+                                    $atualizar_bau->save();
+
+                                    //Atualizando Saldo de quem ta recebendo a doação
+                                    $atualizar_saldo_patrocinador = User::find($patrocinador[0]['user_id']);
+                                    $atualizar_saldo_patrocinador->balance += ($Chests->return / 4);
+                                    $atualizar_saldo_patrocinador->save();
+
+                                    //Crianto o extrato financeiro no sistema;
+                                    $new_extract = new Extract;
+                                    $new_extract->user_id = $patrocinador[0]['user_id'];
+                                    $new_extract->status = 1;
+                                    $new_extract->about = 'Venda de Código - '.$AuthUser->user;
+                                    $new_extract->value =  ($Chests->return / 4);
+                                    $new_extract->ref =  $AuthUser->id;
+                                    $new_extract->save();
+
+                                    $buscar_doador = false;
+                                    break;
+                                }
+
+                                
+                            }
+                            
+                        }
+
+                    
+
+                    }
+                    
+                    
+                    $patrocinador = Affiliate::where('affiliate_id', $patrocinador[0]['user_id'])->get();  
+
+                    
+                }
+
 
                 //Criando uma nova mandala no sistema;
                 $new_chest = new Chest;
@@ -143,6 +448,7 @@ class yantraController extends Controller
                 $new_extract->ref =  $id;
                 $new_extract->save();
 
+
             }else{
 
                 //Crianto o extrato financeiro no sistema;
@@ -153,6 +459,8 @@ class yantraController extends Controller
                 $new_extract->value =  $Chests->precing;
                 $new_extract->ref =  $id;
                 $new_extract->save();
+
+                return "400";
             }
             
         }else{
@@ -166,10 +474,12 @@ class yantraController extends Controller
             $new_extract->ref =  $id;
             $new_extract->save();
 
+            return "404";
+
         }
 
 
-        return redirect(route('wallet'));
+        return "200";
 
         
 
@@ -341,8 +651,6 @@ class yantraController extends Controller
             $new_extract->save();
 
             
-
-            
             $cod_01 = Cods::where('code', $meu_bau->num_01)->get();
             $cod_02 = Cods::where('code', $meu_bau->num_02)->get();
             $cod_03 = Cods::where('code', $meu_bau->num_03)->get();
@@ -368,6 +676,24 @@ class yantraController extends Controller
             return redirect( route('yantra.award', ['id' => $code[0]['chests_id'], 'premio' => $code[0]['bonus']]) );
 
         }
+
+    }
+
+    public function recommendation(){
+
+        return view('game-yantra.indicacao');
+
+    }
+
+    public function revshare(){
+
+        return view('game-yantra.revshare');
+
+    }
+
+    public function career(){
+
+        return view('game-yantra.carreira');
 
     }
     

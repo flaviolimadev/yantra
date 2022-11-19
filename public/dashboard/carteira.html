@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Latinbets - A melhor casa de apostas da america latina</title>
+  <title>Dashboard Yantra</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
   <link rel="stylesheet" href="css/style.css">
 
   <style>
@@ -36,6 +38,14 @@
         color: #FFF;
         white-space: nowrap;
         font-weight: 700;
+    }
+    @media screen {
+        main {
+            padding: 0rem 1rem;
+        }
+        .conteudo-perfil .card.card-body {
+            padding: 1rem;
+        }
     }
   </style>
   
@@ -140,7 +150,7 @@
     </nav>
   </header>
 
-  <main>
+<main>
     <div class="menu-perfil">
         <ul class="mb-5">
             <li data-bs-toggle="collapse" data-bs-target="#collapseCart" aria-expanded="false" aria-controls="collapseCart">
@@ -215,153 +225,292 @@
     </div>
 
     <div class="conteudo-perfil">
-      <div>
-          <span class="subtitle-perfil mobile">Dólar do dia <span>BRL 5,13</span> </span>
-      </div>
-      
-      <div class="title extrato" data-bs-toggle="collapse" href="#collapseCarteira">
-          <img src="img/icones/extrato.png" alt="Carteira do Usuário" width="30px">
-          <span>Carteira</span>
-      </div>
-
-      <div class="conteudo collapse show" id="collapseCarteira">
-          <div class="card card-body menu-superior-right">
-              <div class="perfil-superior">
-                  <div class="left" style="text-align: left">
-                      <span>Olá, <?= $_SESSION["usuario"];?></span>
-                      <div style="display: flex; align-items: center; padding: 0px !important; margin-left: 0 !important; gap: 7px; font-weight: 700;">
-                          <span style="font-size: 1.5rem;"><?= vdata($_SESSION["usuario"])["moeda"];?>  <span><?= number_format(vdata($_SESSION["usuario"])["entradas"], 2, ',', '.');?></span> </span>
-                          <a href="#" style="position: relative; top: 2px; font-size: 16px;"> <i class="fa-solid fa-arrow-rotate-right"></i> </a> 
-                      </div>
-                  </div>
-                  <!--
-                  <div class="right">
-                      <a href="#">
-                          <img src="assets/img/icones/deposit.png" width="25px">
-                          <span>Depositar</span>
-                      </a>
-                  </div>
-                  -->
-              </div>
-              <div class="perfil-inferior">
-                  <div>
-                      <span style="display: block;" translate="no">Créditos de Bônus</span>
-                      <span style="font-size: 1.5rem; font-weight: 700;"><?= vdata($_SESSION["usuario"])["moeda"];?> <span>0,00</span> </span>
-                  </div>
-                  <div>
-                      <span style="display: block;" translate="no">Prêmios de Bônus</span>
-                      <span style="font-size: 1.5rem; font-weight: 700;"><?= vdata($_SESSION["usuario"])["moeda"];?> <span><?=  number_format(vdata($_SESSION["usuario"])["premios"], 2, ',', '.');?></span> </span>
-                  </div>
-                  
-                  <img class="img-cadeado" src="img/icones/cadeado.png" width="16px">
-              </div>
-              <div style="padding-top: 0; text-align: left;">
-                  <span>Rollover Atual 1x</span>
-              </div>
-          </div>
-      </div>
-
-      <div class="title extrato" data-bs-toggle="collapse" href="#collapseExtrato">
-          <img src="img/icones/extrato.png" alt="Extrato Financeiro" width="30px">
-          <span>EXTRATO FINANCEIRO</span>
-      </div>
-
-      <div class="conteudo collapse show" id="collapseExtrato">
-        <div class="card card-body">
-          <div class="boxmainpgcaixa">
-              <div class="gestao-caixa">
-              <br>
-              <h2>Resumo da conta</h2>
-              
-              <?php if($_SESSION["usuario"] == "harpia"){ ?>
-              
-              <div class="cardscaixa">
-                  <div>
-                      <p>Apostas em Aberto</p>
-                      <h3 style="font-size: 20px;"><?= vdata($_SESSION["usuario"])["moeda"];?> <?=number_format($aberto, 2, ',', '.');?></h3>
-                  </div>
-                  <div>
-                      <p>Apostas</p>
-                      <h3 style="font-size: 20px;"><?= vdata($_SESSION["usuario"])["moeda"];?> 3.336,30</h3>
-                  </div>
-                  <div>
-                      <p>Prêmios</p>
-                      <h3 style="font-size: 20px;"><?= vdata($_SESSION["usuario"])["moeda"];?> 4.946,58</h3>
-                  </div>
-                  <div>
-                      <p>Cassino</p>
-                      <h3 style="font-size: 20px;"><?= vdata($_SESSION["usuario"])["moeda"];?> 0,00</h3>
-                  </div>
-                  <div id="total"> 
-                      <p>Total</p>
-                      <h3 style="font-size: 20px;"><?= vdata($_SESSION["usuario"])["moeda"];?> 1.610,28</h3>
-                  </div>
-              </div>
-              
-              <?php }else{ ?>
-              
-              
-              <div class="cardscaixa">
-                  <div>
-                      <p>Apostas em Aberto</p>
-                      <h3 style="font-size: 20px;"><?= vdata($_SESSION["usuario"])["moeda"];?> <?=number_format($aberto, 2, ',', '.');?></h3>
-                  </div>
-                  <div>
-                      <p>Apostas</p>
-                      <h3 style="font-size: 20px;"><?= vdata($_SESSION["usuario"])["moeda"];?> <?=number_format($apostas, 2, ',', '.');?></h3>
-                  </div>
-                  <div>
-                      <p>Prêmios</p>
-                      <h3 style="font-size: 20px;"><?= vdata($_SESSION["usuario"])["moeda"];?> <?=number_format($premios, 2, ',', '.');?></h3>
-                  </div>
-                  <div>
-                      <p>Cassino</p>
-                      <h3 style="font-size: 20px;"><?= vdata($_SESSION["usuario"])["moeda"];?> 0,00</h3>
-                  </div>
-                  <div id="total"> 
-                      <p>Total</p>
-                      <h3 style="font-size: 20px;"><?= vdata($_SESSION["usuario"])["moeda"];?> <?=number_format($premios - $apostas, 2, ',', '.');?></h3>
-                  </div>
-              </div>
-              
-              <?php } ?>
-          </div>
-          <div class="mainpgextrato">
-              <div class="table-responsive">
-              <br>
-              <h2>Extrato da conta</h2><br>
-              <table class="table-dark">
-                  <thead>
-                      <tr>
-                      <th scope="col">Data</th>
-                      <th scope="col">Valor</th>
-                      <th scope="col">Tipo</th>
-                      <th scope="col">Descrição</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                      <?php
-                      $query3 = "SELECT * FROM `solicitacoes` WHERE usuario = '{$_SESSION["usuario"]}'";
-                      $result3 = mysqli_query($conn, $query3);
-                      while ($row = mysqli_fetch_array($result3)){
-                      ?>
-                          <tr>
-                              <th scope="row"><?= $row["dataa"]; ?></th>
-                              <td><?=vdata($_SESSION['usuario'])["moeda"]?> <?= number_format($row["valor"], 2, ',', '.'); ?></td>
-                              <td><?= $row["metodo"]; ?></td>
-                              <td><?= $row["tipo"]; ?></td>
-                          </tr>
-                      <?php } ?>
-                  </tbody>
-          </table>
-          </div>
-          <br><br>
-      </div>
-      </div>
+        <div>
+            <span class="subtitle-perfil mobile">
+                Dólar do dia
+                <span>BRL 5,13</span>
+            </span>
         </div>
-      </div>
+      
+        <div class="title extrato" data-bs-toggle="collapse" href="#collapseCarteira">
+            <img src="img/icones/extrato.png" alt="Carteira do Usuário" width="30px">
+            <span>Carteira</span>
+        </div>
+
+        <div class="conteudo collapse show" id="collapseCarteira">
+            <div class="card card-body menu-superior-right">
+                <div class="perfil-superior">
+                    <div class="left" style="text-align: left">
+                        <span>Olá, <?= $_SESSION["usuario"];?></span>
+                        <div style="display: flex; align-items: center; padding: 0px !important; margin-left: 0 !important; gap: 7px; font-weight: 700;">
+                            <span style="font-size: 1.5rem;"><?= vdata($_SESSION["usuario"])["moeda"];?>  <span><?= number_format(vdata($_SESSION["usuario"])["entradas"], 2, ',', '.');?></span> </span>
+                            <a href="#" style="position: relative; top: 2px; font-size: 16px;"> <i class="fa-solid fa-arrow-rotate-right"></i> </a> 
+                        </div>
+                    </div>
+                    <!--
+                    <div class="right">
+                        <a href="#">
+                            <img src="assets/img/icones/deposit.png" width="25px">
+                            <span>Depositar</span>
+                        </a>
+                    </div>
+                    -->
+                </div>
+                <div class="perfil-inferior">
+                    <div>
+                        <span style="display: block;" translate="no">Créditos de Bônus</span>
+                        <span style="font-size: 1.5rem; font-weight: 700;"><?= vdata($_SESSION["usuario"])["moeda"];?> <span>0,00</span> </span>
+                    </div>
+                    <div>
+                        <span style="display: block;" translate="no">Prêmios de Bônus</span>
+                        <span style="font-size: 1.5rem; font-weight: 700;"><?= vdata($_SESSION["usuario"])["moeda"];?> <span><?=  number_format(vdata($_SESSION["usuario"])["premios"], 2, ',', '.');?></span> </span>
+                    </div>
+                    
+                    <img class="img-cadeado" src="img/icones/cadeado.png" width="16px">
+                </div>
+                <div style="padding-top: 0; text-align: left;">
+                    <span>Rollover Atual 1x</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="title extrato" data-bs-toggle="collapse" href="#collapseExtrato">
+            <img src="img/icones/extrato.png" alt="Extrato Financeiro" width="30px">
+            <span>EXTRATO FINANCEIRO</span>
+        </div>
+
+        <div class="conteudo collapse show" id="collapseExtrato">
+            <div class="card card-body">
+                <div class="boxmainpgcaixa">
+                    <div class="gestao-caixa">
+                    <h2>Resumo da conta</h2>
+              
+                    <?php if($_SESSION["usuario"] == "harpia"){ ?>
+              
+                <div class="cardscaixa">
+                    <div>
+                        <p>Apostas em Aberto</p>
+                        <h3 style="font-size: 20px;"><?= vdata($_SESSION["usuario"])["moeda"];?> <?=number_format($aberto, 2, ',', '.');?></h3>
+                    </div>
+                    <div>
+                        <p>Apostas</p>
+                        <h3 style="font-size: 20px;"><?= vdata($_SESSION["usuario"])["moeda"];?> 3.336,30</h3>
+                    </div>
+                    <div>
+                        <p>Prêmios</p>
+                        <h3 style="font-size: 20px;"><?= vdata($_SESSION["usuario"])["moeda"];?> 4.946,58</h3>
+                    </div>
+                    <div>
+                        <p>Cassino</p>
+                        <h3 style="font-size: 20px;"><?= vdata($_SESSION["usuario"])["moeda"];?> 0,00</h3>
+                    </div>
+                    <div id="total"> 
+                        <p>Total</p>
+                        <h3 style="font-size: 20px;"><?= vdata($_SESSION["usuario"])["moeda"];?> 1.610,28</h3>
+                    </div>
+                </div>
+              
+                <?php }else{ ?>
+              
+                <div class="cardscaixa">
+                    <div>
+                        <p>Apostas em Aberto</p>
+                        <h3 style="font-size: 20px;"><?= vdata($_SESSION["usuario"])["moeda"];?> <?=number_format($aberto, 2, ',', '.');?></h3>
+                    </div>
+                    <div>
+                        <p>Apostas</p>
+                        <h3 style="font-size: 20px;"><?= vdata($_SESSION["usuario"])["moeda"];?> <?=number_format($apostas, 2, ',', '.');?></h3>
+                    </div>
+                    <div>
+                        <p>Prêmios</p>
+                        <h3 style="font-size: 20px;"><?= vdata($_SESSION["usuario"])["moeda"];?> <?=number_format($premios, 2, ',', '.');?></h3>
+                    </div>
+                    <div>
+                        <p>Cassino</p>
+                        <h3 style="font-size: 20px;"><?= vdata($_SESSION["usuario"])["moeda"];?> 0,00</h3>
+                    </div>
+                    <div id="total"> 
+                        <p>Total</p>
+                        <h3 style="font-size: 20px;"><?= vdata($_SESSION["usuario"])["moeda"];?> <?=number_format($premios - $apostas, 2, ',', '.');?></h3>
+                    </div>
+                </div>
+              
+                <?php } ?>
+                    </div>
+                </div>
+
+                <div class="mainpgextrato">
+                    <div>
+                        <br>
+                        <h2>Transações</h2><br>
+                    </div>
+
+                    <div class="table-transacoes">
+                        <div class="filtro-transacoes">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Último mês</option>
+                                <option value="1">Últimas 24 Horas</option>
+                                <option value="2">Últimos 7 dias</option>
+                                <option value="3">Últimos 30 dias</option>
+                                <option value="4">Últimos 90 dias</option>
+                            </select>
+
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Todas</option>
+                                <option value="1">Apostas</option>
+                                <option value="2">Depósitos</option>
+                                <option value="3">Saques</option>
+                            </select>
+                        </div>
+
+                        <div class="title-transacoes">
+                            <div class="tipo-transacao">
+                                <span>Tipo e trans. ID</span>
+                            </div>
+
+                            <div class="data-transacao">
+                                <span>Data da</span>
+                                <br>
+                                <span>transação</span>
+                            </div>
+
+                            <div class="montante-transacao">
+                                <span>Montante</span>
+                            </div>
+
+                            <div class="saldo-transacao">
+                                <span>Novo Saldo</span>
+                            </div>
+
+                            <div class="estado-transacao">
+                                <span>Estado</span>
+                            </div>
+                        </div>
+
+                        <div class="item-transacao">
+                            <div class="title-item">
+                                <div class="icone">
+                                    <img src="img/icones/fichas-de-cassino.png" width="35px">
+                                </div>
+    
+                                <div class="area-titulo">
+                                    <span class="titulo">Monopoly Live - Aposta</span>
+                                    
+                                    <span class="sub-titulo">Trans. ID: 99999999999</span>
+                                </div>    
+                            </div>
+
+                            <div class="data-item">
+                                <span>01/01/2023</span>
+                                <br>
+                                <span>00:00</span>
+                            </div>
+
+                            <div class="montante-item">
+                                <div class="mont-sald-mob">
+                                    <span>Montante</span>
+                                </div>
+                                <span>R$ 700,00</span>
+                            </div>
+
+                            <div class="saldo-item">
+                                <div class="mont-sald-mob">
+                                    <span>Novo Saldo</span>
+                                </div>
+                                <span>R$ 777,00</span>
+                            </div>
+
+                            <div class="estado-item">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+
+                        <div class="item-transacao">
+                            <div class="title-item">
+                                <div class="icone">
+                                    <img src="img/icones/fichas-de-cassino.png" width="35px">
+                                </div>
+    
+                                <div class="area-titulo">
+                                    <span class="titulo">Monopoly Live - Aposta</span>
+                                    
+                                    <span class="sub-titulo">Trans. ID: 99999999999</span>
+                                </div>    
+                            </div>
+
+                            <div class="data-item">
+                                <span>01/01/2023</span>
+                                <br>
+                                <span>00:00</span>
+                            </div>
+
+                            <div class="montante-item">
+                                <div class="mont-sald-mob">
+                                    <span>Montante</span>
+                                </div>
+                                <span>R$ 700,00</span>
+                            </div>
+
+                            <div class="saldo-item">
+                                <div class="mont-sald-mob">
+                                    <span>Novo Saldo</span>
+                                </div>
+                                <span>R$ 777,00</span>
+                            </div>
+
+                            <div class="estado-item">
+                                <i class="fa-solid fa-spinner"></i>
+                            </div>
+                        </div>
+
+                        <div class="item-transacao">
+                            <div class="title-item">
+                                <div class="icone">
+                                    <img src="img/icones/fichas-de-cassino.png" width="35px">
+                                </div>
+    
+                                <div class="area-titulo">
+                                    <span class="titulo">Monopoly Live - Aposta</span>
+                                    
+                                    <span class="sub-titulo">Trans. ID: 99999999999</span>
+                                </div>    
+                            </div>
+
+                            <div class="data-item">
+                                <span>01/01/2023</span>
+                                <br>
+                                <span>00:00</span>
+                            </div>
+
+                            <div class="montante-item">
+                                <div class="mont-sald-mob">
+                                    <span>Montante</span>
+                                </div>
+                                <span>R$ 700,00</span>
+                            </div>
+
+                            <div class="saldo-item">
+                                <div class="mont-sald-mob">
+                                    <span>Novo Saldo</span>
+                                </div>
+                                <span>R$ 777,00</span>
+                            </div>
+                            
+                            <div class="estado-item">
+                                <i class="fa-sharp fa-solid fa-ban"></i>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
-  </main>
+</main>
         
   <script src="https://kit.fontawesome.com/a9ecbddeee.js" crossorigin="anonymous"></script>
 

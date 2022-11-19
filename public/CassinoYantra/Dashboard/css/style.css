@@ -1067,3 +1067,202 @@ h6{
     padding: 0rem 1rem;
   }
 }
+
+i.fa-solid.fa-check {
+  color: #008000;
+}
+
+i.fa-solid.fa-spinner {
+  color: #ff991e;
+}
+
+i.fa-sharp.fa-solid.fa-ban {
+  color: #ca1818;
+}
+
+.filtro-transacoes {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-bottom: 1rem;
+  gap: 10px;
+}
+
+.filtro-transacoes select.form-select {
+  width: auto;
+  font-size: 14px;
+  color: #1e1e1e;
+  font-weight: 500;
+  border-radius: 10px;
+}
+
+.table-transacoes {
+  padding: 10px;
+  background-color: #f2f2f2e6;
+  border-radius: 10px;
+}
+
+.title-transacoes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  color: #1e1e1e;
+  margin-bottom: 1rem;
+}
+
+.tipo-transacao, .item-transacao .title-item {
+  width: 50%;
+}
+
+.data-transacao, .montante-transacao, .saldo-transacao, .item-transacao .data-item, .item-transacao .montante-item, .item-transacao .saldo-item  {
+  width: 15%;
+}
+
+.estado-transacao, .item-transacao .estado-item {
+  width: 5%;
+  min-width: 60px;
+}
+
+.data-transacao, .montante-transacao, .saldo-transacao, .estado-transacao, .saldo-transacao, .item-transacao .data-item, .item-transacao .montante-item, .item-transacao .saldo-item, .item-transacao .estado-item {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.item-transacao {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  color: #1e1e1e;
+  margin-top: 0.5rem;
+  border-radius: 10px;
+}
+
+.item-transacao .title-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.item-transacao div.area-titulo {
+  display: grid;
+  line-height: 1.2rem;
+}
+
+.item-transacao span.titulo {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+}
+
+.item-transacao span.sub-titulo, .item-transacao .data-item {
+  font-size: 12px;
+  color: #3c3c3c;
+}
+
+.item-transacao .montante-item, .item-transacao .saldo-item {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.mont-sald-mob {
+  display: none;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 1000px) {
+  .item-transacao .icone {
+    display: none;
+  }
+  .data-transacao, .montante-transacao, .saldo-transacao, .item-transacao .data-item, .item-transacao .montante-item, .item-transacao .saldo-item {
+    width: 25%;
+  }
+  .item-transacao span.sub-titulo {
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .title-transacoes, .item-transacao span.titulo, .item-transacao .montante-item, .item-transacao .saldo-item {
+    font-size: 10px;
+  }
+  .item-transacao span.sub-titulo, .item-transacao .data-item {
+    font-size: 9px;
+  }
+  .estado-transacao, .item-transacao .estado-item {
+    font-size: 10px;
+    min-width: 35px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .filtro-transacoes select.form-select {
+    width: 50%;
+    font-size: 12px;
+  }
+  .title-transacoes {
+    display: none;
+  }
+  .table-transacoes {
+    padding: 10px 10px 18px 10px;
+  }
+  .item-transacao {
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+  .item-transacao .title-item {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+  .item-transacao .data-item {
+    width: 20%;
+  }
+  .item-transacao .montante-item, .item-transacao .saldo-item, .item-transacao .estado-item {
+    padding-top: 10px;
+    border-top: 1px solid #3c3c3c;
+  }
+  .item-transacao .montante-item, .item-transacao .saldo-item {
+    width: 40%;
+  }
+  .item-transacao .estado-item {
+    width: 20%;
+    height: 40px;
+  }
+  .mont-sald-mob {
+    display: block;
+  }
+  i.fa-solid {
+    position: relative;
+    top: 25%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .item-transacao .title-item {
+    width: 70%;
+  }
+  .item-transacao .data-item {
+    width: 29%;
+  }
+}
+
+/*
+.item-transacao .title-item {
+
+}
+
+.item-transacao .data-item, .item-transacao .montante-item, .item-transacao .saldo-item {
+
+}
+
+.item-transacao .estado-item {
+
+}
+

@@ -36,13 +36,7 @@
                 <a class="btn-menu" data-bs-toggle="collapse" href="#collapseMenuDesk" role="button" aria-expanded="false" aria-controls="collapseMenuDesk">
                     <img src="{{ asset('CassinoYantra/game/token/img/menu.png') }}" alt="Menu" width="50px">
     
-                    <div class="collapse" id="collapseMenuDesk">
-                        <div class="card card-body">
-                          <li><a href="{{ route('yantra') }}" class="item">Meus Baús</a></li>
-                          <li><a href="#" class="item">Indicação</a></li>
-                          <li><a href="#" class="item">Plano de carreira</a></li>
-                        </div>
-                    </div>
+                    @include('_sections/menu_game')
                 </a>
             </div>
         </div>

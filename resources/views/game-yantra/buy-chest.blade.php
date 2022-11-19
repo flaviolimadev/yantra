@@ -37,13 +37,7 @@
                 <a class="btn-menu" data-bs-toggle="collapse" href="#collapseMenuDesk" role="button" aria-expanded="false" aria-controls="collapseMenuDesk">
                     <img src="{{ asset('CassinoYantra/game/token/img/menu.png') }}" alt="Menu" width="50px">
     
-                    <div class="collapse" id="collapseMenuDesk">
-                        <div class="card card-body">
-                          <li><a href="{{ route('yantra') }}" class="item">Meus Baús</a></li>
-                          <li><a href="#" class="item">Indicação</a></li>
-                          <li><a href="#" class="item">Plano de carreira</a></li>
-                        </div>
-                    </div>
+                    @include('_sections/menu_game')
                 </a>
             </div>
         </div>
@@ -97,7 +91,7 @@
                             <img src="{{ asset('CassinoYantra/game/token/img/bau.png') }}" alt="Baú" width="120px">
                         </div>
                         <div class="right">
-                          <a href="{{ route('yantra.buy', ['id' => 4]) }}">
+                          <a href="#" onclick="check_bau(7)">
                             <button>
                                 <img src=" {{ asset('CassinoYantra/game/token/img/p-roxa.png ') }}" height="55px">
                                 <span>$ 1.200</span>
@@ -127,7 +121,7 @@
                             <img src="{{ asset('CassinoYantra/game/token/img/bau.png') }}" alt="Baú" width="120px">
                         </div>
                         <div class="right">
-                          <a href="{{ route('yantra.buy', ['id' => 4]) }}">
+                          <a href="#" onclick="check_bau(6)">
                             <button>
                                 <img src=" {{ asset('CassinoYantra/game/token/img/p-roxa.png ') }}" height="55px">
                                 <span>$ 600</span>
@@ -157,7 +151,7 @@
                             <img src="{{ asset('CassinoYantra/game/token/img/bau.png') }}" alt="Baú" width="120px">
                         </div>
                         <div class="right">
-                            <a href="{{ route('yantra.buy', ['id' => 4]) }}">
+                            <a href="#" onclick="check_bau(4)">
                                 <button>
                                     <img src=" {{ asset('CassinoYantra/game/token/img/p-roxa.png ') }}" height="55px">
                                     <span>$ 360</span>
@@ -187,7 +181,7 @@
                             <img src="{{ asset('CassinoYantra/game/token/img/bau.png') }}" alt="Baú" width="120px">
                         </div>
                         <div class="right">
-                          <a href="{{ route('yantra.buy', ['id' => 4]) }}">
+                          <a href="#" onclick="check_bau(2)">
                             <button>
                                 <img src=" {{ asset('CassinoYantra/game/token/img/p-roxa.png ') }}" height="55px">
                                 <span>$ 120</span>
@@ -218,7 +212,7 @@
                             <img src="{{ asset('CassinoYantra/game/token/img/bau.png') }}" alt="Baú" width="120px">
                         </div>
                         <div class="right">
-                          <a href="{{ route('yantra.buy', ['id' => 4]) }}">
+                          <a href="#" onclick="check_bau(7)">
                             <button>
                                 <img src=" {{ asset('CassinoYantra/game/token/img/p-roxa.png ') }}" height="55px">
                                 <span>$ 840</span>
@@ -248,7 +242,7 @@
                             <img src="{{ asset('CassinoYantra/game/token/img/bau.png') }}" alt="Baú" width="120px">
                         </div>
                         <div class="right">
-                          <a href="{{ route('yantra.buy', ['id' => 4]) }}">
+                          <a href="#" onclick="check_bau(5)">
                             <button>
                                 <img src=" {{ asset('CassinoYantra/game/token/img/p-roxa.png ') }}" height="55px">
                                 <span>$ 480</span>
@@ -278,7 +272,7 @@
                             <img src="{{ asset('CassinoYantra/game/token/img/bau.png') }}" alt="Baú" width="120px">
                         </div>
                         <div class="right">
-                          <a href="{{ route('yantra.buy', ['id' => 4]) }}">
+                          <a href="#" onclick="check_bau(3)">
                             <button>
                                 <img src=" {{ asset('CassinoYantra/game/token/img/p-roxa.png ') }}" height="55px">
                                 <span>$ 240</span>
@@ -308,7 +302,7 @@
                             <img src="{{ asset('CassinoYantra/game/token/img/bau.png') }}" alt="Baú" width="120px">
                         </div>
                         <div class="right">
-                          <a href="{{ route('yantra.buy', ['id' => 1]) }}">
+                          <a href="#" onclick="check_bau(1)">
                             <button>
                                 <img src=" {{ asset('CassinoYantra/game/token/img/p-roxa.png ') }}" height="55px">
                                 <span>$ 60</span>
@@ -379,10 +373,10 @@
                                   <div>
                                       <span>Baú encerrado com sucesso!!</span>
                                   </div>
-                                  <span>Numero 01 - USD {{ $chest_fechado->num_01 }}</span><br>
-                                  <span>Numero 02 - USD {{ $chest_fechado->num_02 }}</span><br>
-                                  <span>Numero 03 - USD {{ $chest_fechado->num_03 }}</span><br>
-                                  <span>Numero 04 - USD {{ $chest_fechado->num_04 }}</span><br><br>
+                                  <span>Numero 01 - USD {{ $chest_fechado->num_01 == 999 ? 'Vendido' : $chest_fechado->num_01}}</span><br>
+                                  <span>Numero 02 - USD {{ $chest_fechado->num_02 == 999 ? 'Vendido' : $chest_fechado->num_02}}</span><br>
+                                  <span>Numero 03 - USD {{ $chest_fechado->num_03 == 999 ? 'Vendido' : $chest_fechado->num_03}}</span><br>
+                                  <span>Numero 04 - USD {{ $chest_fechado->num_04 == 999 ? 'Vendido' : $chest_fechado->num_04}}</span><br><br>
                                   <span>Cods: 00YAN0{{$chest_fechado->id}}</span><hr>
                               </div>
           
@@ -416,10 +410,10 @@
                                   <div>
                                       <span>Baú está aberto!!</span>
                                   </div>
-                                  <span>Numero 01 - {{ $chest_aberto->num_01 }}</span><br>
-                                  <span>Numero 02 - {{ $chest_aberto->num_02 }}</span><br>
-                                  <span>Numero 03 - {{ $chest_aberto->num_03 }}</span><br>
-                                  <span>Numero 04 - {{ $chest_aberto->num_04 }}</span><br><br>
+                                  <span>Numero 01 - {{ $chest_aberto->num_01 == 999 ? 'Vendido' : $chest_aberto->num_01 }}</span><br>
+                                  <span>Numero 02 - {{ $chest_aberto->num_02 == 999 ? 'Vendido' : $chest_aberto->num_02 }}</span><br>
+                                  <span>Numero 03 - {{ $chest_aberto->num_03 == 999 ? 'Vendido' : $chest_aberto->num_03 }}</span><br>
+                                  <span>Numero 04 - {{ $chest_aberto->num_04 == 999 ? 'Vendido' : $chest_aberto->num_04 }}</span><br><br>
                                   <span>Cods: 00YAN0{{$chest_aberto->id}}</span><hr>
                               </div>
           
@@ -437,5 +431,49 @@
     <script src="{{ asset('https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js') }}" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
     <script src="{{ asset('CassinoYantra/game/token/js/script.js') }}"></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script>
+
+        function check_bau(id){
+
+            $.ajax({
+
+                url: "{{ route('yantra.buy') }}",
+                type: "get",
+                data: "_token={{ csrf_token() }}&id="+id,
+                dataType: "html"
+
+            }).done(function(resposta) {
+
+
+                if(resposta == 404){
+
+                    swal({
+                        title: "Indisponível",
+                        text: "Selecione um baú valido!",
+                        icon: "error",
+                    });
+
+                }
+
+                if(resposta == 400){
+
+                    swal({
+                        title: "Saldo Insuficiente",
+                        text: "Você não popssui saldo para este baú!",
+                        icon: "error",
+                    });
+
+                }
+
+            });
+
+        }
+
+    </script>
 </body>
 </html>

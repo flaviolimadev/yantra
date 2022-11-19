@@ -143,7 +143,7 @@
                     </div>
 
                     <div class="my-apostas">
-                        <a href="#">
+                        <a href="{{ route('bets') }}">
                             <span class="qt-aposts">0</span>
                             <span>Minhas Apostas</span>
                         </a>
@@ -151,11 +151,11 @@
                 </div>
 
                 <div class="btns-on">
-                    <a href="#" class="btn-notificacoes">
+                    <a href="{{ route('notifications') }}" class="btn-notificacoes">
                         <img src="{{ asset('assets/icones/notificacao.png') }} " alt="Notificações" width="20px">
                     </a>
 
-                    <a href="#" class="btn-depositar">
+                    <a href="{{ route('deposit') }}" class="btn-depositar">
                         <span class="tag-mais">+</span>
                         <span>Depositar</span>
                     </a>
@@ -190,20 +190,20 @@
                     <a href="{{ route('home') }}">
                         <img src="{{ asset('assets/icones/user-branco.png') }} " alt="Perfil" width="15px">
                     </a>
-                    <a href="#">
+                    <a href="{{ route('notifications') }}">
                         <img src="{{ asset('assets/icones/notificacao.png') }} " alt="Notificações" width="20px">
                     </a>
                 </li>
 
                 <li class="apostas-mobile">
-                    <a href="#">
+                    <a href="{{ route('bets') }}">
                         <span class="qt-apostas">0</span>
                         <span>Minhas Apostas</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="#" class="btn-depositar">
+                    <a href="{{ route('deposit') }}" class="btn-depositar">
                         <span class="tag-mais">+</span>
                         <span>Depositar</span>
                     </a>

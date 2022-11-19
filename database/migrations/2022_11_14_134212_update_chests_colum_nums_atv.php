@@ -20,7 +20,7 @@ class UpdateChestsColumNumsAtv extends Migration
             $table->integer('atv_num_03')->default(0);
             $table->integer('atv_num_04')->default(0);
         });
-    }
+    } 
 
     /**
      * Reverse the migrations.

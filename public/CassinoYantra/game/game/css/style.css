@@ -101,7 +101,7 @@ main {
     display: flex;
     gap: 1%;
     position: relative;
-    top: 45%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     justify-content: center;
@@ -468,9 +468,10 @@ span.tagn.\34 {
     gap: 10px;
     color: #fff;
     font-size: 1.5rem;
-    padding: 10px 5px;
+    padding: 5px;
     max-width: 210px;
     margin: 0 auto;
+    white-space: nowrap;
 }
 
 .redirect-roleta a:hover {
@@ -482,9 +483,80 @@ span.tagn.\34 {
     display: none;
 }
 
+.indicacoes {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    padding: 3rem 5rem;
+    border-radius: 20px;
+    position: absolute;
+    top: 75%;
+    left: 33%;
+    transform: translate(-50%, -50%);
+}
+
+img.tag-indicacoes {
+    position: absolute;
+    top: -60px;
+    right: -75px;
+    transform: rotate(20deg);
+}
+
+span.title-indicacoes {
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+    line-height: 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-image: linear-gradient(to bottom, #edb23b, #f7d45d, #edb23b, #f7d45d, #edb23b);
+    color: black;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+span.subtitle-indicacoes {
+    font-family: 'AnandaNeptouch';
+    font-size: 1.2rem;
+}
+
+.indicacoes div {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.indicacoes div input {
+    font-size: 1.5rem;
+    width: 80%;
+    padding: 6px;
+    border-radius: 7px 0px 0px 7px;
+    border: none;
+    background-color: #fff;
+    color: #3a006d;
+    font-weight: 700;
+}
+
+.indicacoes div button {
+    font-family: 'AnandaNeptouch';
+    font-size: 1.5rem;
+    width: 20%;
+    background-image: linear-gradient(to right bottom, #6e41c2, #6b3dbb, #683ab4, #6536ad, #6233a6);
+    border-radius: 0px 5px 5px 0px;
+    border: 1px solid #6233a6;
+    border-top: 2px solid #fff;
+    color: #fff;
+    padding: 5px;
+}
+
 @media screen and (min-width: 1660px) {
     .area-principal {
         transform: translate(-50%, -50%) scale(1.5);
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .redirect-roleta .cima img {
+        margin-bottom: 1rem;
     }
 }
 
@@ -510,6 +582,9 @@ span.tagn.\34 {
     .area-principal {
         transform: translate(-50%, -50%) scale(1.1);
     }
+    .indicacoes {
+        transform: translate(-50%, -65%) scale(.8);
+    }
     .botoes-valores {
         width: 20%;
         max-width: 230px;
@@ -534,10 +609,13 @@ span.tagn.\34 {
 @media screen and (max-width: 900px) {
     .redirect-roleta .cima img {
         width: 170px;
-        position: absolute;
-        top: 50%;
+    }
+    .area-principal {
+        top: 30%;
+    }
+    .indicacoes {
+        width: 100%;
         left: 50%;
-        transform: translate(-50%, -135%);
     }
 }
 
@@ -559,12 +637,33 @@ span.tagn.\34 {
     }
     .redirect-roleta.mobile {
         display: block;
-        top: 15%;
+        top: 0%;
     }
     .redirect-roleta .cima img {
-        left: 52%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-40%);
+        margin-bottom: 1rem;
+    }
+    .redirect-roleta a {
+        font-family: 'AnandaNeptouch';
+    }
+    .indicacoes {
+        top: 98%;
     }
 }
+
+@media screen and (max-width: 580px) {
+    img.tag-indicacoes {
+        transform: rotate(10deg);
+        width: 120px;
+    }
+    .indicacoes {
+        transform: translate(-50%, -65%) scale(.6);
+        width: 130%;
+        top: 95%;
+    }
+} 
 
 @media screen and (max-width: 500px) {
     .area-principal {
@@ -573,30 +672,89 @@ span.tagn.\34 {
 }
 
 @media screen and (max-width: 430px) {
-    main {
-        height: 93vh;
-    }
     .area-principal {
-        top: 50%;
         width: 150%;
         transform: translate(-50%, -75%) scale(0.6);
     }
     .redirect-roleta.mobile {
-        top: 5%;
+        top: -9%;
         transform: scale(0.9);
     }
+    .indicacoes {
+        top: 85%;
+        width: 150%;
+        padding: 3rem;
+    }
+    img.tag-indicacoes {
+        top: -35px;
+        right: -20px;
+    }
+    .indicacoes div button {
+        width: 35%;
+    }
 }
+
+@media screen and (max-width: 350px) {
+    .indicacoes {
+        transform: translate(-50%, -65%) scale(.5);
+        width: 180%;
+    }
+} 
 
 @media screen and (max-width: 335px) {
     .area-principal {
         width: 180%;
         transform: translate(-50%, -80%) scale(0.5);
     }
+}
+
+@media screen and (max-height: 830px) {
+    main {
+        margin-bottom: 1.5rem;
+    }
     .redirect-roleta.mobile {
-        top: 0%;
+        top: 3%;
+    }
+    .indicacoes {
+        top: 103%;
     }
 }
 
+@media screen and (max-height: 780px) {
+    .redirect-roleta.mobile {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -13%) scale(0.9);
+    }
+    .indicacoes {
+        top: 105%;
+    }
+}
+
+@media screen and (max-height: 680px) {
+    .redirect-roleta a {
+        white-space: nowrap;
+    }
+}
+
+@media screen and (max-height: 630px) {
+    .indicacoes {
+        top: 110%;
+    }
+}
+
+@media screen and (max-height: 575px) {
+    .indicacoes {
+        top: 114%;
+    }
+}
+
+@media screen and (max-height: 530px) {
+    .indicacoes {
+        top: 117%;
+    }
+}
 /* HEADER RESPONSIVO */
 div#collapseMenuDesk {
     position: absolute;
