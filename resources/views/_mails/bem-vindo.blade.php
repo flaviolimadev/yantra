@@ -4,10 +4,12 @@
 
 @section('conteudo')
 
-<h1>Seja Bem-Vindo! usuario.</h1>
+<h1>Seja Bem-Vindo!</h1>
 
 <p>Parabéns, seu cadastro foi concluido com sucesso!! faça seu deposito e comece agora a lucrar. </p>
 
 <a href="https://yantracasino.com">Acessar Yantra</a>
+
+<hr>
 
 @endsection

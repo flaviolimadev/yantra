@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class RegisterMail extends Mailable
+class newPasswordMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -28,6 +28,6 @@ class RegisterMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Mail from yantracasino.com')->view('_mails.bem-vindo');
+        return $this->subject('Mail from yantracasino.com')->view('_mails.nova-senha');
     }
 }

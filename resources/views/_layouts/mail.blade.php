@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cassino Yantra club</title>
+    <title>Casino Yantra club</title>
 </head>
 <body>
     <style>
@@ -188,7 +188,7 @@
 
     </style>
     <header>
-        <img src="{{ asset('mails/img/') }}@yield('img')" alt="Título do e-mail" width="100%">
+        <img src="{{ asset('mails/img') }}/@yield('img')" alt="Título do e-mail" width="100%">
     </header>
     
     <main>
@@ -198,123 +198,17 @@
     <footer>
         <section class="footer-desk">
             <div class="left principal">
-                <div class="area-logo-footer">
-                    <a href="#">
-                        <img src="{{ asset('mails/assets/logos/cassino_cinza.png') }}" alt="Yantra club" width="150px">
-                    </a>
-
-                    <a href="#">
-                        <img src="{{ asset('mails/assets/icones/download_android.png') }}" alt="Download android" width="150px">
-                    </a>
-                </div>
-
-                <div class="area-links-footer">
-                    <div class="left">
-                        <li>
-                            <a href="#">Sobre nós</a>
-                        </li>
-                        <li>
-                            <a href="#">FAQ - Perguntas Frequentes</a>
-                        </li>
-                        <li>
-                            <a href="#">The Revolution</a>
-                        </li>
-                        <li>
-                            <a href="#">Contato</a>
-                        </li>
-                    </div>
-                    <div class="right">
-                        <li>
-                            <a href="#">Termos e Condições</a>
-                        </li>
-                        <li>
-                            <a href="#">Regras Gerais</a>
-                        </li>
-                        <li>
-                            <a href="#">Políticas de Privacidade e Segurança</a>
-                        </li>
-                        <li>
-                            <a href="#">Políticas de Proteção ao Jogador</a>
-                        </li>
-                    </div>
-                </div>
+                
 
                 <div class="direitos">
                     <span>© 2018 á 2022 Yantra Club Todos os direitos resevados.</span>
                 </div>
 
-                <div class="redes-sociais-footer">
-                    <li>
-                        <a href="#">
-                            <img src="{{ asset('mails/assets/icones/facebook.png') }}" alt="Facebook" width="20px">
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            <img src="{{ asset('mails/assets/icones/instagram.png') }}" alt="Instagram" width="20px">
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            <img src="{{ asset('mails/assets/icones/telegram.png') }}" alt="Telegram" width="20px">
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            <img src="{{ asset('mails/assets/icones/youtube.png') }}" alt="Youtube" width="20px">
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            <img src="{{ asset('mails/assets/icones/twitter.png') }}" alt="Twitter" width="20px">
-                        </a>
-                    </li>
-                </div>
+                
             </div>
 
             <div class="separador-footer"></div>
 
-            <div class="right principal">
-                <p>Viva a experiência Yantra Club onde quer que esteja, com nosso site mobile e aplicação de celular para android.</p>
-
-                <div>
-                    <a href="#">
-                        <img src="{{ asset('mails/assets/icones/jogo_responsavel.png') }}" alt="Jogo responsável" width="180px">
-                    </a>
-                </div>
-
-                <p>A participação de menores de 18 anos nos jogos oferecidos pela Yantra Club é estritamente proibida.</p>
-
-                <ul>
-                    <li>
-                        <a href="https://www.gamcare.org.uk">
-                            <img src="{{ asset('mails/https://d1ygf46rsya1tb.cloudfront.net/prod/uploads/2019/07/GamCare-SGSCMYK-Copy.png') }}" alt="gordon_moody" width="100px" style="filter: grayscale(100%); filter: gray; /* IE */;">
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://ecogra.org/">
-                            <img src="{{ asset('mails/assets/icones/ecogra.png') }}" alt="ecogra" width="100px">
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://www.gamblingcommission.gov.uk">
-                            <img src="{{ asset('mails/assets/icones/gambling_commission.png') }}" alt="gambling_commission" width="100px">
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://www.gamblingtherapy.org">
-                            <img src="{{ asset('mails/assets/icones/gambling_therapy.png') }}" alt="gambling_therapy" width="50px">
-                        </a>
-                    </li>
-                </ul>
-            </div>
 
         </section>
     </footer>

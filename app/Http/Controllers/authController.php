@@ -85,8 +85,12 @@ class authController extends Controller
 
 
         //Enviando Email para o usuário;
-        $mail = new RegisterMail;
-        Mail::to($r->email)->send($mail);
+        $mailData = [
+            "nome" => $r->name,
+            "user" => $r->user
+        ];
+
+        Mail::to($r->email)->send(new RegisterMail($mailData));
 
         //Enviando SMS para o usuário;
         $API_KEY = "b71f3225-f2e9-4af7-80cd-5fd36e0b4462";

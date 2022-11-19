@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\BonusRecevMail;
+use App\Mail\buyChestMail;
+use App\Mail\sellChestMail;
 use App\Models\Affiliate;
 use App\Models\Chest;
 use App\Models\Chests_sys;
@@ -11,6 +14,7 @@ use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use League\CommonMark\Extension\CommonMark\Node\Inline\Code;
 use Mockery\CountValidator\Exact;
 
@@ -327,6 +331,16 @@ class yantraController extends Controller
                                     $new_extract->ref =  $AuthUser->id;
                                     $new_extract->save();
 
+                                    //Enviando Email de venda de código;
+                                    $recebor_da_venda = User::find($patrocinador[0]['user_id']);
+
+                                    $mailData = [
+                                        "nome" => $recebor_da_venda->nome,
+                                        "user" => $recebor_da_venda->user
+                                    ];
+
+                                    Mail::to($AuthUser->email)->send( new sellChestMail( $mailData) );
+
                                     $buscar_doador = false;
                                     break;
                                 }
@@ -447,6 +461,14 @@ class yantraController extends Controller
                 $new_extract->value =  $Chests->precing;
                 $new_extract->ref =  $id;
                 $new_extract->save();
+
+                //Enviando Email de compra do báu;
+                $mailData = [
+                    "nome" => $AuthUser->nome,
+                    "user" => $AuthUser->user
+                ];
+
+                Mail::to($AuthUser->email)->send( new buyChestMail( $mailData) );
 
 
             }else{
@@ -670,6 +692,15 @@ class yantraController extends Controller
                 }
 
             }
+
+            //Enviando Email do premio ganho na roleta;
+            $mailData = [
+                "nome" => $AuthUser->nome,
+                "user" => $AuthUser->user,
+                "premio" => ($code[0]['bonus'] * 100)
+            ];
+
+            Mail::to($AuthUser->email)->send( new BonusRecevMail( $mailData) );
 
 
 
